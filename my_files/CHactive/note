@@ -1,0 +1,2 @@
+1. Here output.py is modified such that the 'initial_molecule' tag will give last geometry. In qchem6 this format is used across SCF cycles, so the initial geometry will give the final optimized geometry.
+2. convertxyz.py file is modified to convert qchem output to Gaussian input to be used in sterimol code.
