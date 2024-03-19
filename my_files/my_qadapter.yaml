@@ -1,0 +1,21 @@
+_fw_name: CommonAdapter
+_fw_q_type: SLURM
+rocket_launch: rlaunch -w /home1/patraa/FireWorks/ex_queue_2/my_fworker.yaml -l /home1/patraa/FireWorks/ex_queue_2/my_launchpad.yaml singleshot --offline
+nodes: 1
+ntasks_per_node: 1
+walltime: '00:02:00'
+mem_per_cpu: '2GB'
+queue: 'sharada' 
+account: null
+job_name: 'fw_test'
+logdir: /home1/patraa/fw_logs
+pre_rocket: null
+post_rocket: null
+
+# You can override commands by uncommenting and changing the following lines:
+# _q_commands_override:
+#    submit_cmd: my_qsubmit
+#    status_cmd: my_qstatus
+
+#You can also supply your own template by uncommenting and changing the following line:
+_fw_template_file: /home1/patraa/FireWorks/ex_queue_2/SLURM_template.txt 

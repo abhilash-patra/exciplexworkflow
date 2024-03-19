@@ -1,0 +1,35 @@
+#!/bin/bash -l
+#SBATCH --nodes=$${nodes}
+#SBATCH --ntasks=$${ntasks}
+#SBATCH --ntasks-per-node=$${ntasks_per_node}
+#SBATCH --ntasks-per-core=$${ntasks_per_core}
+#SBATCH --exclude=$${exclude_nodes}
+#SBATCH --cpus-per-task=$${cpus_per_task}
+#SBATCH --gres=$${gres}
+#SBATCH --qos=$${qos}
+#SBATCH --time=$${walltime}
+#SBATCH --partition=$${queue}
+#SBATCH --account=$${account}
+#SBATCH --job-name=$${job_name}
+#SBATCH --license=$${license}
+#SBATCH --output=$${job_name}.out
+#SBATCH --constraint=$${constraint}
+#SBATCH --signal=$${signal}
+#SBATCH --mem=$${mem}
+#SBATCH --mem-per-cpu=$${mem_per_cpu}
+
+hostname
+module load intel/19.0.4
+module load gcc/8.3.0
+module load anaconda3/2021.05
+module load openbabel/3.0.0
+module load qchem-openmp
+export QCLOCALSCR=$TMPDIR
+
+ulimit -c 0
+cp ../../$${job_name}.inp $${launch_dir}
+$${rocket_launch}
+$${post_rocket}
+cp -R "$TMPDIR" "$SLURM_SUBMIT_DIR"
+cp $${job_name}.out ../../
+
