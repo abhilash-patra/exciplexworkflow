@@ -35,3 +35,5 @@ The following commands install the required packages.
 
 ### Pymatgen Parsers for Q-Chem input file generation and excited state output parsing
 
+*Workflow published: https://doi.org/10.1063/5.0158061*
+*and used https://doi.org/10.1021/acs.jctc.4c00005*
