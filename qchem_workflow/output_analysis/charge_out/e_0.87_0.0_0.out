@@ -1,0 +1,1340 @@
+==========================================
+SLURM_JOB_ID = 12490498
+SLURM_JOB_NODELIST = a01-07
+TMPDIR = /tmp/SLURM_12490498
+==========================================
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) pmix/3.1.3
+
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+anaconda3/2021.05:
+   This module is deprecated and will be removed in mid-December. Please use
+   module load conda instead and run conda init bash again to update your
+   shell to use the newer version of conda. Your conda environments will not
+   be impacted.
+
+-------------------------------------------------------------------------------
+
+a01-07.hpc.usc.edu
+You are running Q-Chem version: 5.4.2
+
+#
+# job setting
+#
+local host:  a01-07.hpc.usc.edu
+current dir: /scratch2/patraa/workflow/cyclohexane/wB97_6311g_opt/ex_charge/charge_fsm_all
+input file:  e_0.87_0.0_0.inp
+output file: 
+nprocs     : 0
+nthreads   : 32
+#
+# qchem installation setting
+#
+QC:          /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp
+QCAUX:       /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/qcaux
+QCPROG:      /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s
+QCPROG_S:    /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s
+PARALLEL:    -DSERIAL
+QCMPI:       
+#
+# qchem directory setting
+#
+qcrun:       qchem31625
+QCSCRATCH:   /scratch1/patraa
+QCLOCALSCR:  /tmp/SLURM_12490498
+QCTMPDIR:    /tmp/SLURM_12490498
+QCFILEPREF:  /tmp/SLURM_12490498/qchem31625
+QCSAVEDIR:   
+workdirs:    /tmp/SLURM_12490498/qchem31625
+workdir0:    /tmp/SLURM_12490498/qchem31625
+partmpdirs =  
+#
+# parallel setting
+#
+QCRSH:           ssh
+QCMPI:           mpich
+QCMPIRUN:        /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/bin/mpi/mpirun_qchem
+QCMACHINEFILE:   /tmp/SLURM_12490498/qchem31625/hostfile
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+
+Running Job 1 of 1 e_0.87_0.0_0.inp
+qchem e_0.87_0.0_0.inp_31625.0 /tmp/SLURM_12490498/qchem31625/ 0
+/spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s e_0.87_0.0_0.inp_31625.0 /tmp/SLURM_12490498/qchem31625/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4, Q-Chem, Inc., Pleasanton, CA (2021)
+
+ License issued to: University of Southern California
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ Romit Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  T. Neudecker,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  R. P. Steele,  J. E. Subotnik,  A. J. W. Thom,  
+ A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  T. A. Wesolowski,  
+ K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  S. Faraji,  
+ P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors since Version 5.4.0: 
+ Chandrima Chakravarty,  L. Cunha,  R. Kang,  Yongbin Kim,  S. Kotaru,  
+ Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  V. Parravicini,  
+ Haisheng Ren,  Hengyuan Shen,  Yingli Su,  Hung-Yi Tsai,  C. Utku,  
+ Fang Wang,  Jeff Yang,  F. Zeller
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  Arup K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+   Please cite Q-Chem as follows:
+  "Software for the frontiers of quantum chemistry:
+   An overview of developments in the Q-Chem 5 package"
+   J. Chem. Phys. 155, 084801 (2021)
+   https://doi.org/10.1063/5.0055522 (open access)
+
+ Q-Chem 5.4.2 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Fri Nov 25 08:32:36 2022  
+
+ Host: 
+0
+
+     Scratch files written to /tmp/SLURM_12490498/qchem31625//
+ Dec1321 |scratch|qcdevops|jenkins|workspace|build_RNUM 6013   
+ Processing $rem in /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/config/preferences:
+ Processing $rem in /home1/patraa/.qchemrc:
+ Symmetry turned off for PCM/SM12/SMD calculation
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0 1
+C     -0.7395764014      4.9255585320      2.1111145497
+C     -0.6078685574      3.5713541839      1.4070403220
+N      0.3595977478      2.6991222012      2.0320682962
+H     -1.0137966720      4.8061216457      3.1607444043
+H      0.1845697042      5.5010478338      2.0566819023
+H     -1.5678847713      3.0556917024      1.4085050306
+H     -1.5304462992      5.4882471446      1.6147202493
+C      0.1034221947      2.1155617736      3.3397948685
+H      0.5861195826      2.7761150183      4.0726824063
+H      0.6467825933      1.1693606422      3.3562959151
+H     -0.3151860331      3.6968949784      0.3653947627
+C     -1.3559199750      1.8936252354      3.6855498498
+H     -1.8451585968      1.2644067045      2.9425708963
+H     -1.4008351912      1.3852392605      4.6498603811
+H     -1.9159314453      2.8255339782      3.7727163659
+C      1.7038914544      2.6266566827      1.5310065155
+H      2.2962384820      2.0417775195      2.2334354870
+H      1.6565763066      2.0404028091      0.6014537079
+C      2.3664594201      3.9719466070      1.2483444422
+H      3.3759426247      3.7741548558      0.8874873024
+H      1.8396601577      4.5365188136      0.4778370597
+H      2.4356404667      4.5793002808      2.1532321737
+C      3.2835884841     -0.3564933798     -0.0533242930
+C      4.1286622103     -0.2763947581     -1.1820546195
+H      3.7035028233     -0.0663614561     -2.1568884700
+C      5.4927805932     -0.4961704936     -1.0854688762
+H      6.1036396031     -0.4362900230     -1.9805006656
+C      6.0825274441     -0.8088517971      0.1380823125
+H      7.1498529447     -0.9829619891      0.2102913451
+C      5.2705312506     -0.8961731224      1.2650111373
+H      5.7075655075     -1.1337854387      2.2297515134
+C      3.9048886116     -0.6725059603      1.1751948818
+H      3.3083072511     -0.7220153133      2.0793171137
+C      1.8540072041     -0.0961940345     -0.1326788004
+C      1.2721412560      0.6755129086     -1.1845860588
+H      1.8944147033      1.0100615065     -2.0080665097
+C     -0.0425327685      1.0619663221     -1.1701572658
+H     -0.4098323541      1.6413557974     -2.0092596647
+C     -0.9412678884      0.6831850992     -0.1186738571
+C     -0.3787349991     -0.1942655676      0.8652539001
+H     -1.0097488855     -0.6022206224      1.6470971216
+C      0.9449742894     -0.5531728143      0.8618935361
+H      1.2943597926     -1.2311043887      1.6339955780
+C     -2.3027708873      1.1485486490     -0.0610340752
+C     -3.2615571353      0.6002484518      0.8345812226
+H     -3.0027886090     -0.2626188040      1.4375018280
+C     -4.5413751923      1.1139408533      0.9427257384
+H     -5.2366040879      0.6536403853      1.6380822942
+C     -4.9539381500      2.1972621025      0.1650185285
+H     -5.9576379635      2.5959815482      0.2520692856
+C     -4.0434966932      2.7400159608     -0.7411621993
+H     -4.3391410824      3.5757433799     -1.3681483647
+C     -2.7598939490      2.2353841739     -0.8579653084
+H     -2.0862181161      2.7070954214     -1.5635311967
+$end
+
+$rem
+basis = 6-311g**
+cis_state_deriv = 1
+job_type = sp
+method = wb97xd
+cis_n_roots = 10
+cis_singlets = 1
+cis_triplets = 0
+rpa = 2
+pop_mulliken = -1
+solvent_method = pcm
+scf_convergence = 8
+symmetry = false
+symmetry_ignore = 1
+thresh = 14
+$end
+
+$pcm
+heavypoints 590
+method swig
+radii bondi
+solver inversion
+theory cpcm
+$end
+
+$solvent
+dielectric 2.03
+opticaldielectric 2.01
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C      -0.7395764014     4.9255585320     2.1111145497
+    2      C      -0.6078685574     3.5713541839     1.4070403220
+    3      N       0.3595977478     2.6991222012     2.0320682962
+    4      H      -1.0137966720     4.8061216457     3.1607444043
+    5      H       0.1845697042     5.5010478338     2.0566819023
+    6      H      -1.5678847713     3.0556917024     1.4085050306
+    7      H      -1.5304462992     5.4882471446     1.6147202493
+    8      C       0.1034221947     2.1155617736     3.3397948685
+    9      H       0.5861195826     2.7761150183     4.0726824063
+   10      H       0.6467825933     1.1693606422     3.3562959151
+   11      H      -0.3151860331     3.6968949784     0.3653947627
+   12      C      -1.3559199750     1.8936252354     3.6855498498
+   13      H      -1.8451585968     1.2644067045     2.9425708963
+   14      H      -1.4008351912     1.3852392605     4.6498603811
+   15      H      -1.9159314453     2.8255339782     3.7727163659
+   16      C       1.7038914544     2.6266566827     1.5310065155
+   17      H       2.2962384820     2.0417775195     2.2334354870
+   18      H       1.6565763066     2.0404028091     0.6014537079
+   19      C       2.3664594201     3.9719466070     1.2483444422
+   20      H       3.3759426247     3.7741548558     0.8874873024
+   21      H       1.8396601577     4.5365188136     0.4778370597
+   22      H       2.4356404667     4.5793002808     2.1532321737
+   23      C       3.2835884841    -0.3564933798    -0.0533242930
+   24      C       4.1286622103    -0.2763947581    -1.1820546195
+   25      H       3.7035028233    -0.0663614561    -2.1568884700
+   26      C       5.4927805932    -0.4961704936    -1.0854688762
+   27      H       6.1036396031    -0.4362900230    -1.9805006656
+   28      C       6.0825274441    -0.8088517971     0.1380823125
+   29      H       7.1498529447    -0.9829619891     0.2102913451
+   30      C       5.2705312506    -0.8961731224     1.2650111373
+   31      H       5.7075655075    -1.1337854387     2.2297515134
+   32      C       3.9048886116    -0.6725059603     1.1751948818
+   33      H       3.3083072511    -0.7220153133     2.0793171137
+   34      C       1.8540072041    -0.0961940345    -0.1326788004
+   35      C       1.2721412560     0.6755129086    -1.1845860588
+   36      H       1.8944147033     1.0100615065    -2.0080665097
+   37      C      -0.0425327685     1.0619663221    -1.1701572658
+   38      H      -0.4098323541     1.6413557974    -2.0092596647
+   39      C      -0.9412678884     0.6831850992    -0.1186738571
+   40      C      -0.3787349991    -0.1942655676     0.8652539001
+   41      H      -1.0097488855    -0.6022206224     1.6470971216
+   42      C       0.9449742894    -0.5531728143     0.8618935361
+   43      H       1.2943597926    -1.2311043887     1.6339955780
+   44      C      -2.3027708873     1.1485486490    -0.0610340752
+   45      C      -3.2615571353     0.6002484518     0.8345812226
+   46      H      -3.0027886090    -0.2626188040     1.4375018280
+   47      C      -4.5413751923     1.1139408533     0.9427257384
+   48      H      -5.2366040879     0.6536403853     1.6380822942
+   49      C      -4.9539381500     2.1972621025     0.1650185285
+   50      H      -5.9576379635     2.5959815482     0.2520692856
+   51      C      -4.0434966932     2.7400159608    -0.7411621993
+   52      H      -4.3391410824     3.5757433799    -1.3681483647
+   53      C      -2.7598939490     2.2353841739    -0.8579653084
+   54      H      -2.0862181161     2.7070954214    -1.5635311967
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =        2174.77659890 hartrees
+ There are       90 alpha and       90 beta electrons
+ Requested basis set is 6-311G(d,p)
+ There are 241 shells and 624 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ Discretize the solute cavity surface with Lebedev spheres
+	Using 110 Lebedev grid points for each H atom
+	Using 590 Lebedev grid points for other atoms
+	Atomic van der Waals radii will be scaled by 1.20
+ Remove points where switching function is < 1.0e-08
+ Keep 5910 surface tesserae and discard 12030 interior tesserae
+ Molecular Surface Area = 400.020 Angst**2
+ A cutoff of  1.0D-14 yielded  19820 shell pairs
+ There are    133886 function pairs (    144491 Cartesian)
+ Smallest overlap matrix eigenvalue = 1.22E-04
+
+ Scale SEOQF with 1.000000e-02/1.000000e-02/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000370 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 180.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.2220 Hartree-Fock + 1.0000 wB97X-D + LR-HF
+ Correlation:  1.0000 wB97X-D
+ Using SG-2 standard quadrature grid
+ Dispersion:   Grimme D
+ using 32 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+    1    -994.6607280069      2.78e-02  
+    2    -986.4548296415      1.93e-03  
+    3    -986.5692630867      1.38e-03  
+    4    -986.6550873605      2.15e-04  
+    5    -986.6567281592      1.23e-04  
+    6    -986.6573966379      1.86e-05  
+    7    -986.6574151939      7.47e-06  
+    8    -986.6574186083      2.95e-06  
+    9    -986.6574193247      9.68e-07  
+   10    -986.6574194129      2.70e-07  
+   11    -986.6574194248      1.10e-07  
+   12    -986.6574194259      3.78e-08  
+   13    -986.6574194261      1.27e-08  
+   14    -986.6574194261      5.56e-09  Convergence criterion met
+ ---------------------------------------
+ SCF time:   CPU 5319.19s  wall 349.00s 
+
+************** Final PCM Free Energy Summary **************
+ G_electrostatic  =      -0.00688063 hartree =      -4.31766212 kcal/mol
+ G_cavitation     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_dispersion     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_repulsion      =       0.00000000 hartree =       0.00000000 kcal/mol
+ --------------------------------------------------
+ Non-electrostatic Free Energy =       0.00000000 hartree =       0.00000000 kcal/mol
+ Total                         =      -0.00688063 hartree =      -4.31766212 kcal/mol
+ --------------------------------------------------
+ SCF Energy (H0 + V/2)                       =    -986.65741943 
+ Solute Internal Energy (H0)                 =    -986.65053879 
+ Total Free Energy (H0 + V/2 + non-elec)     =    -986.65741943 hartree
+                                             = -619136.87532230 kcal/mol
+***********************************************************
+
+ SCF   energy in the final basis set =     -986.6574194261
+ Total energy in the final basis set =     -986.6574194261
+ 
+ MAX_CIS_SUBSPACE fits in available memory
+ Adding PCM contribution to the XC response (LR-PCM)
+ CIS energy converged when residual is below 10e- 6
+
+ Direct TDDFT calculation will be performed
+ Exchange:     0.2220 Hartree-Fock + 1.0000 wB97X-D + LR-HF
+ Correlation:  1.0000 wB97X-D
+ Using SG-2 standard quadrature grid
+ Dispersion:   Grimme D
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0          10      0.004219    0.000767
+   2         0          10      0.001512    0.000210
+   3         0          10      0.001156    0.000187
+   4         0          10      0.000943    0.000181
+   5         0          10      0.000591    0.000124
+   6         0          10      0.000397    0.000086
+   7         0          10      0.000178    0.000039
+   8         0          10      0.000110    0.000027
+   9         2           8      0.000077    0.000033
+  10         4           6      0.000063    0.000042
+  11         5           5      0.000060    0.000045
+  12         7           3      0.000026    0.000019
+  13         8           2      0.000017    0.000011
+  14         9           1      0.000010    0.000005
+  15         9           1      0.000008    0.000003
+  16         9           1      0.000006    0.000001
+  17        10           0      0.000006    0.000001    Roots Converged
+ ---------------------------------------------------
+ 
+ ---------------------------------------------------
+             TDDFT Excitation Energies              
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =    2.8795
+ Total energy for state  1:                  -986.55160154 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -1.1826 X   0.3678 Y  -0.0380 Z
+    Strength   :     0.1083123802
+    X: D(   90) --> V(    1) amplitude =  0.9852
+
+ Excited state   2: excitation energy (eV) =    3.9609
+ Total energy for state  2:                  -986.51185941 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -3.1898 X   0.8583 Y   0.0492 Z
+    Strength   :     1.0591126203
+    X: D(   89) --> V(    1) amplitude =  0.9616
+
+ Excited state   3: excitation energy (eV) =    4.0508
+ Total energy for state  3:                  -986.50855419 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.5362 X  -0.2336 Y  -0.1143 Z
+    Strength   :     0.0352484250
+    X: D(   90) --> V(    2) amplitude =  0.8651
+    X: D(   90) --> V(    5) amplitude = -0.3994
+
+ Excited state   4: excitation energy (eV) =    4.7802
+ Total energy for state  4:                  -986.48174877 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.1067 X   0.0304 Y   0.1598 Z
+    Strength   :     0.0044339640
+    X: D(   85) --> V(    1) amplitude = -0.3046
+    X: D(   87) --> V(    1) amplitude =  0.5037
+    X: D(   89) --> V(    2) amplitude =  0.6506
+
+ Excited state   5: excitation energy (eV) =    4.8726
+ Total energy for state  5:                  -986.47835399 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.2169 X  -0.0133 Y   0.1124 Z
+    Strength   :     0.0071472357
+    X: D(   85) --> V(    1) amplitude = -0.3358
+    X: D(   86) --> V(    1) amplitude =  0.3351
+    X: D(   89) --> V(    4) amplitude =  0.3043
+    X: D(   90) --> V(    4) amplitude =  0.5425
+    X: D(   90) --> V(    5) amplitude = -0.3881
+
+ Excited state   6: excitation energy (eV) =    4.8991
+ Total energy for state  6:                  -986.47738080 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0276 X   0.0597 Y   0.0766 Z
+    Strength   :     0.0012237731
+    X: D(   90) --> V(    3) amplitude =  0.9137
+
+ Excited state   7: excitation energy (eV) =    5.0256
+ Total energy for state  7:                  -986.47273343 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0228 X   0.0606 Y  -0.1616 Z
+    Strength   :     0.0037295136
+    X: D(   85) --> V(    1) amplitude =  0.4634
+    X: D(   86) --> V(    1) amplitude =  0.3525
+    X: D(   86) --> V(    3) amplitude =  0.2912
+    X: D(   88) --> V(    4) amplitude =  0.2723
+    X: D(   89) --> V(    4) amplitude =  0.3194
+    X: D(   89) --> V(    5) amplitude =  0.2910
+    X: D(   90) --> V(    4) amplitude =  0.2209
+    X: D(   90) --> V(    5) amplitude =  0.3072
+
+ Excited state   8: excitation energy (eV) =    5.2415
+ Total energy for state  8:                  -986.46479881 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.3124 X   0.2518 Y  -0.1951 Z
+    Strength   :     0.0255631863
+    X: D(   85) --> V(    1) amplitude =  0.3301
+    X: D(   86) --> V(    1) amplitude = -0.3654
+    X: D(   89) --> V(    4) amplitude = -0.2373
+    X: D(   90) --> V(    4) amplitude =  0.5592
+    X: D(   90) --> V(    5) amplitude = -0.4085
+
+ Excited state   9: excitation energy (eV) =    5.3685
+ Total energy for state  9:                  -986.46012920 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.2421 X  -0.1385 Y  -0.0501 Z
+    Strength   :     0.0105625739
+    X: D(   88) --> V(    1) amplitude =  0.7269
+    X: D(   89) --> V(    3) amplitude =  0.4844
+    X: D(   90) --> V(    3) amplitude = -0.2739
+
+ Excited state  10: excitation energy (eV) =    5.4722
+ Total energy for state 10:                  -986.45632037 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0775 X  -0.0894 Y   0.1470 Z
+    Strength   :     0.0047734918
+    X: D(   87) --> V(    1) amplitude = -0.3039
+    X: D(   90) --> V(    2) amplitude =  0.2390
+    X: D(   90) --> V(    4) amplitude =  0.3627
+    X: D(   90) --> V(    5) amplitude =  0.4303
+    X: D(   90) --> V(    6) amplitude =  0.3794
+    X: D(   90) --> V(    7) amplitude = -0.3127
+    X: D(   90) --> V(   10) amplitude = -0.3107
+ 
+ ---------------------------------------------------
+  SETman timing summary (seconds)
+  CPU time              9171.87s
+  System time              0.00s
+  Wall time              544.78s
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+-14.3788 -10.3072 -10.3064 -10.3055 -10.3050 -10.2919 -10.2916 -10.2916
+-10.2911 -10.2906 -10.2905 -10.2904 -10.2902 -10.2902 -10.2898 -10.2897
+-10.2897 -10.2894 -10.2894 -10.2890 -10.2848 -10.2792 -10.2616 -10.2539
+-10.2518  -1.0013  -0.9791  -0.9676  -0.9486  -0.8956  -0.8596  -0.8574
+ -0.8529  -0.8511  -0.8457  -0.8424  -0.8087  -0.7956  -0.7416  -0.7239
+ -0.7234  -0.7025  -0.6989  -0.6968  -0.6728  -0.6700  -0.6335  -0.6318
+ -0.6140  -0.5764  -0.5745  -0.5715  -0.5665  -0.5483  -0.5396  -0.5375
+ -0.5350  -0.5211  -0.5190  -0.5123  -0.5100  -0.5088  -0.5038  -0.4980
+ -0.4875  -0.4863  -0.4793  -0.4695  -0.4661  -0.4655  -0.4607  -0.4483
+ -0.4428  -0.4392  -0.4368  -0.4311  -0.4306  -0.4223  -0.4185  -0.4144
+ -0.4052  -0.4003  -0.3982  -0.3763  -0.3399  -0.3362  -0.3340  -0.3323
+ -0.2791  -0.2351
+ -- Virtual --
+ -0.0061   0.0453   0.0559   0.0582   0.0726   0.1097   0.1133   0.1229
+  0.1303   0.1336   0.1411   0.1479   0.1561   0.1614   0.1722   0.1734
+  0.1763   0.1814   0.1858   0.1910   0.1966   0.1973   0.2031   0.2077
+  0.2127   0.2147   0.2315   0.2350   0.2386   0.2422   0.2445   0.2492
+  0.2584   0.2626   0.2670   0.2693   0.2725   0.2839   0.2907   0.2922
+  0.2957   0.3095   0.3101   0.3149   0.3204   0.3228   0.3283   0.3503
+  0.3523   0.3525   0.3586   0.3660   0.3691   0.3801   0.3850   0.3870
+  0.4008   0.4037   0.4056   0.4108   0.4139   0.4183   0.4208   0.4286
+  0.4329   0.4372   0.4498   0.4544   0.4647   0.4663   0.4676   0.4756
+  0.4798   0.4855   0.4896   0.4919   0.4980   0.5027   0.5041   0.5094
+  0.5147   0.5161   0.5222   0.5251   0.5300   0.5320   0.5342   0.5423
+  0.5445   0.5496   0.5571   0.5608   0.5665   0.5758   0.5810   0.5841
+  0.5956   0.6087   0.6122   0.6137   0.6299   0.6311   0.6391   0.6441
+  0.6494   0.6516   0.6573   0.6591   0.6639   0.6706   0.6737   0.6781
+  0.6794   0.6848   0.6857   0.6881   0.6890   0.6917   0.6981   0.6998
+  0.7069   0.7076   0.7099   0.7181   0.7203   0.7247   0.7250   0.7279
+  0.7306   0.7356   0.7373   0.7422   0.7479   0.7510   0.7570   0.7626
+  0.7643   0.7725   0.7809   0.7851   0.7971   0.8074   0.8165   0.8221
+  0.8242   0.8282   0.8308   0.8356   0.8402   0.8482   0.8549   0.8641
+  0.8760   0.8851   0.8911   0.8941   0.9016   0.9061   0.9106   0.9216
+  0.9241   0.9359   0.9369   0.9449   0.9480   0.9603   0.9686   0.9723
+  0.9865   0.9969   1.0021   1.0105   1.0207   1.0235   1.0356   1.0418
+  1.0511   1.0639   1.0710   1.0755   1.0949   1.0971   1.0997   1.1069
+  1.1100   1.1288   1.1381   1.1398   1.1513   1.1541   1.1570   1.1645
+  1.1706   1.1756   1.1788   1.1917   1.2098   1.2146   1.2182   1.2224
+  1.2327   1.2457   1.2521   1.2586   1.2699   1.2957   1.3026   1.3077
+  1.3346   1.3430   1.3458   1.3534   1.3589   1.3790   1.3816   1.4053
+  1.4135   1.4261   1.4488   1.4863   1.4966   1.5029   1.5181   1.5213
+  1.5320   1.5364   1.5403   1.5431   1.5478   1.5499   1.5551   1.5613
+  1.5695   1.5761   1.5800   1.5858   1.5909   1.5950   1.6046   1.6157
+  1.6212   1.6278   1.6368   1.6391   1.6394   1.6470   1.6499   1.6507
+  1.6554   1.6630   1.6694   1.6706   1.6789   1.6860   1.6921   1.6933
+  1.7047   1.7111   1.7164   1.7176   1.7252   1.7279   1.7417   1.7462
+  1.7493   1.7509   1.7599   1.7658   1.7786   1.7851   1.7906   1.7975
+  1.8019   1.8094   1.8177   1.8221   1.8286   1.8349   1.8427   1.8499
+  1.8515   1.8561   1.8593   1.8684   1.8740   1.8761   1.8831   1.8857
+  1.8917   1.9007   1.9107   1.9148   1.9248   1.9273   1.9387   1.9519
+  1.9617   1.9760   1.9790   1.9850   1.9918   2.0000   2.0036   2.0070
+  2.0130   2.0155   2.0192   2.0203   2.0268   2.0355   2.0388   2.0437
+  2.0459   2.0616   2.0623   2.0794   2.0822   2.0900   2.0956   2.1079
+  2.1106   2.1184   2.1294   2.1384   2.1439   2.1588   2.1650   2.1675
+  2.1725   2.1799   2.1823   2.1986   2.2057   2.2185   2.2252   2.2482
+  2.2587   2.2824   2.2885   2.2986   2.3071   2.3213   2.3345   2.3507
+  2.3615   2.3721   2.3842   2.3968   2.3994   2.4049   2.4090   2.4177
+  2.4272   2.4336   2.4387   2.4479   2.4639   2.4711   2.4769   2.4841
+  2.4943   2.4986   2.5017   2.5057   2.5132   2.5198   2.5259   2.5391
+  2.5424   2.5484   2.5577   2.5710   2.5943   2.6084   2.6190   2.6397
+  2.6474   2.6573   2.6583   2.6691   2.6749   2.6845   2.6881   2.6903
+  2.6932   2.6993   2.7019   2.7076   2.7093   2.7166   2.7210   2.7228
+  2.7273   2.7335   2.7398   2.7446   2.7497   2.7519   2.7583   2.7640
+  2.7700   2.7734   2.7751   2.7870   2.7917   2.8058   2.8120   2.8137
+  2.8218   2.8282   2.8326   2.8472   2.8501   2.8601   2.8712   2.8716
+  2.8809   2.8917   2.8954   2.9107   2.9168   2.9197   2.9210   2.9372
+  2.9482   2.9573   2.9667   2.9858   2.9928   3.0027   3.0083   3.0109
+  3.0126   3.0238   3.0270   3.0347   3.0478   3.0604   3.0730   3.0770
+  3.0866   3.0913   3.1138   3.1376   3.1429   3.1694   3.1852   3.2023
+  3.2203   3.2442   3.2856   3.3112   3.3328   3.3472   3.3775   3.3882
+  3.4146   3.4412   3.4508   3.4701   3.4834   3.5042   3.5533   3.5760
+  3.5856   3.5948   3.6032   3.6090   3.6565   3.6880   3.6918   3.7136
+  3.7183   3.7492   3.7603   3.8443   3.8698   3.8980   3.9113   3.9164
+  3.9269   3.9430   3.9512   3.9598   3.9642   4.0080   4.0310   4.0688
+  4.0730   4.1225   4.1304   4.1344   4.1884   4.2271   4.2348   4.2420
+  4.2675   4.2787   4.2961   4.3239   4.3565   4.4323   4.5569   4.7677
+  4.8803   4.9268   4.9558   5.0949   5.1114  23.6118  23.7333  23.8850
+ 23.9870  24.0113  24.0238  24.0413  24.0472  24.0560  24.0603  24.0689
+ 24.0878  24.0956  24.1063  24.1170  24.1369  24.1705  24.1843  24.2440
+ 24.2466  24.2846  24.3219  24.3255  24.3279  35.7332
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.295339
+      2 C                    -0.158093
+      3 N                    -0.409782
+      4 H                     0.108565
+      5 H                     0.112029
+      6 H                     0.148727
+      7 H                     0.101606
+      8 C                    -0.087603
+      9 H                     0.099189
+     10 H                     0.109339
+     11 H                     0.121007
+     12 C                    -0.350451
+     13 H                     0.108412
+     14 H                     0.121571
+     15 H                     0.121731
+     16 C                    -0.097196
+     17 H                     0.109563
+     18 H                     0.148356
+     19 C                    -0.340656
+     20 H                     0.112219
+     21 H                     0.115132
+     22 H                     0.113296
+     23 C                    -0.012412
+     24 C                    -0.098648
+     25 H                     0.122986
+     26 C                    -0.121858
+     27 H                     0.121992
+     28 C                    -0.112909
+     29 H                     0.123868
+     30 C                    -0.124739
+     31 H                     0.122027
+     32 C                    -0.103228
+     33 H                     0.123569
+     34 C                    -0.093545
+     35 C                    -0.128744
+     36 H                     0.114511
+     37 C                    -0.098148
+     38 H                     0.120410
+     39 C                    -0.018238
+     40 C                    -0.078764
+     41 H                     0.119895
+     42 C                    -0.099074
+     43 H                     0.119276
+     44 C                    -0.051840
+     45 C                    -0.125503
+     46 H                     0.131681
+     47 C                    -0.110378
+     48 H                     0.121331
+     49 C                    -0.112280
+     50 H                     0.124005
+     51 C                    -0.113292
+     52 H                     0.121246
+     53 C                    -0.113903
+     54 H                     0.119084
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  1:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.260605
+      2 C                    -0.142363
+      3 N                     0.182031
+      4 H                     0.108683
+      5 H                     0.113389
+      6 H                     0.164967
+      7 H                     0.108871
+      8 C                    -0.071430
+      9 H                     0.138557
+     10 H                     0.119250
+     11 H                     0.120728
+     12 C                    -0.346985
+     13 H                     0.107738
+     14 H                     0.121808
+     15 H                     0.122072
+     16 C                    -0.067623
+     17 H                     0.109368
+     18 H                     0.191665
+     19 C                    -0.313840
+     20 H                     0.117164
+     21 H                     0.114521
+     22 H                     0.117616
+     23 C                    -0.036713
+     24 C                    -0.128631
+     25 H                     0.122854
+     26 C                    -0.125711
+     27 H                     0.121943
+     28 C                    -0.150131
+     29 H                     0.123468
+     30 C                    -0.127510
+     31 H                     0.121943
+     32 C                    -0.137665
+     33 H                     0.122940
+     34 C                    -0.232914
+     35 C                    -0.146886
+     36 H                     0.114244
+     37 C                    -0.166853
+     38 H                     0.119232
+     39 C                    -0.170117
+     40 C                    -0.119213
+     41 H                     0.119300
+     42 C                    -0.149575
+     43 H                     0.118417
+     44 C                    -0.107316
+     45 C                    -0.176874
+     46 H                     0.131055
+     47 C                    -0.116562
+     48 H                     0.121259
+     49 C                    -0.178779
+     50 H                     0.123279
+     51 C                    -0.119645
+     52 H                     0.121198
+     53 C                    -0.164065
+     54 H                     0.118448
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  2:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.288727
+      2 C                    -0.155244
+      3 N                    -0.327892
+      4 H                     0.108710
+      5 H                     0.112033
+      6 H                     0.151177
+      7 H                     0.102704
+      8 C                    -0.084283
+      9 H                     0.106653
+     10 H                     0.108420
+     11 H                     0.118875
+     12 C                    -0.349228
+     13 H                     0.105534
+     14 H                     0.121631
+     15 H                     0.121809
+     16 C                    -0.095314
+     17 H                     0.108553
+     18 H                     0.152795
+     19 C                    -0.338077
+     20 H                     0.112855
+     21 H                     0.114964
+     22 H                     0.113456
+     23 C                    -0.011045
+     24 C                    -0.100504
+     25 H                     0.122705
+     26 C                    -0.122055
+     27 H                     0.121970
+     28 C                    -0.113908
+     29 H                     0.123487
+     30 C                    -0.126280
+     31 H                     0.121942
+     32 C                    -0.101950
+     33 H                     0.122917
+     34 C                    -0.113526
+     35 C                    -0.151194
+     36 H                     0.114084
+     37 C                    -0.091851
+     38 H                     0.119819
+     39 C                    -0.035155
+     40 C                    -0.103812
+     41 H                     0.119181
+     42 C                    -0.093488
+     43 H                     0.118723
+     44 C                    -0.060664
+     45 C                    -0.128508
+     46 H                     0.131053
+     47 C                    -0.112609
+     48 H                     0.121242
+     49 C                    -0.119566
+     50 H                     0.123482
+     51 C                    -0.113828
+     52 H                     0.121218
+     53 C                    -0.121659
+     54 H                     0.118373
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  3:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.267226
+      2 C                    -0.144186
+      3 N                     0.112203
+      4 H                     0.107101
+      5 H                     0.113156
+      6 H                     0.161274
+      7 H                     0.107852
+      8 C                    -0.073095
+      9 H                     0.133346
+     10 H                     0.120365
+     11 H                     0.114216
+     12 C                    -0.348943
+     13 H                     0.094343
+     14 H                     0.121322
+     15 H                     0.120525
+     16 C                    -0.074682
+     17 H                     0.104924
+     18 H                     0.183210
+     19 C                    -0.316107
+     20 H                     0.115003
+     21 H                     0.114144
+     22 H                     0.117108
+     23 C                    -0.012547
+     24 C                    -0.097905
+     25 H                     0.122124
+     26 C                    -0.130205
+     27 H                     0.121938
+     28 C                    -0.108565
+     29 H                     0.123841
+     30 C                    -0.130802
+     31 H                     0.122015
+     32 C                    -0.108293
+     33 H                     0.117132
+     34 C                    -0.065030
+     35 C                    -0.264623
+     36 H                     0.111958
+     37 C                    -0.262820
+     38 H                     0.118166
+     39 C                     0.000819
+     40 C                    -0.252112
+     41 H                     0.117728
+     42 C                    -0.283469
+     43 H                     0.117015
+     44 C                    -0.051185
+     45 C                    -0.137989
+     46 H                     0.130439
+     47 C                    -0.130262
+     48 H                     0.121135
+     49 C                    -0.105563
+     50 H                     0.124030
+     51 C                    -0.137723
+     52 H                     0.121019
+     53 C                    -0.123499
+     54 H                     0.117378
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  4:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.286395
+      2 C                    -0.153274
+      3 N                    -0.282504
+      4 H                     0.108206
+      5 H                     0.112259
+      6 H                     0.152443
+      7 H                     0.103189
+      8 C                    -0.082067
+      9 H                     0.110021
+     10 H                     0.110592
+     11 H                     0.115501
+     12 C                    -0.350277
+     13 H                     0.103059
+     14 H                     0.121521
+     15 H                     0.121420
+     16 C                    -0.094745
+     17 H                     0.107513
+     18 H                     0.155680
+     19 C                    -0.335829
+     20 H                     0.112797
+     21 H                     0.114910
+     22 H                     0.113696
+     23 C                    -0.011549
+     24 C                    -0.103518
+     25 H                     0.122328
+     26 C                    -0.126664
+     27 H                     0.121940
+     28 C                    -0.112213
+     29 H                     0.123809
+     30 C                    -0.129755
+     31 H                     0.121965
+     32 C                    -0.108520
+     33 H                     0.120875
+     34 C                    -0.110625
+     35 C                    -0.151893
+     36 H                     0.113276
+     37 C                    -0.108842
+     38 H                     0.119278
+     39 C                    -0.031604
+     40 C                    -0.109452
+     41 H                     0.118832
+     42 C                    -0.109103
+     43 H                     0.118229
+     44 C                    -0.055836
+     45 C                    -0.133726
+     46 H                     0.130708
+     47 C                    -0.115886
+     48 H                     0.121179
+     49 C                    -0.114450
+     50 H                     0.123865
+     51 C                    -0.119472
+     52 H                     0.121100
+     53 C                    -0.119894
+     54 H                     0.117901
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  5:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.280543
+      2 C                    -0.149227
+      3 N                    -0.198215
+      4 H                     0.108454
+      5 H                     0.112944
+      6 H                     0.156722
+      7 H                     0.104562
+      8 C                    -0.082017
+      9 H                     0.112427
+     10 H                     0.113670
+     11 H                     0.118931
+     12 C                    -0.349629
+     13 H                     0.104494
+     14 H                     0.121299
+     15 H                     0.122114
+     16 C                    -0.087444
+     17 H                     0.107734
+     18 H                     0.161269
+     19 C                    -0.331389
+     20 H                     0.113999
+     21 H                     0.115094
+     22 H                     0.114806
+     23 C                    -0.012296
+     24 C                    -0.097649
+     25 H                     0.122738
+     26 C                    -0.134776
+     27 H                     0.121828
+     28 C                    -0.110074
+     29 H                     0.123851
+     30 C                    -0.129651
+     31 H                     0.121942
+     32 C                    -0.116404
+     33 H                     0.121934
+     34 C                    -0.079997
+     35 C                    -0.109409
+     36 H                     0.114221
+     37 C                    -0.092339
+     38 H                     0.118915
+     39 C                    -0.009764
+     40 C                    -0.066471
+     41 H                     0.119337
+     42 C                    -0.101345
+     43 H                     0.118864
+     44 C                    -0.050758
+     45 C                    -0.186602
+     46 H                     0.130525
+     47 C                    -0.205233
+     48 H                     0.119890
+     49 C                    -0.104501
+     50 H                     0.123891
+     51 C                    -0.194718
+     52 H                     0.120015
+     53 C                    -0.203553
+     54 H                     0.117534
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  6:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.266416
+      2 C                    -0.144425
+      3 N                     0.050268
+      4 H                     0.108761
+      5 H                     0.112696
+      6 H                     0.162738
+      7 H                     0.105329
+      8 C                    -0.074177
+      9 H                     0.130453
+     10 H                     0.117509
+     11 H                     0.118212
+     12 C                    -0.347287
+     13 H                     0.103466
+     14 H                     0.121815
+     15 H                     0.120519
+     16 C                    -0.068920
+     17 H                     0.100473
+     18 H                     0.183655
+     19 C                    -0.318057
+     20 H                     0.116118
+     21 H                     0.114967
+     22 H                     0.117371
+     23 C                    -0.133244
+     24 C                    -0.137384
+     25 H                     0.122261
+     26 C                    -0.141904
+     27 H                     0.121803
+     28 C                    -0.199414
+     29 H                     0.122737
+     30 C                    -0.145146
+     31 H                     0.121806
+     32 C                    -0.140677
+     33 H                     0.119898
+     34 C                    -0.065866
+     35 C                    -0.156237
+     36 H                     0.113578
+     37 C                    -0.125667
+     38 H                     0.119616
+     39 C                     0.003723
+     40 C                    -0.063361
+     41 H                     0.119775
+     42 C                    -0.123115
+     43 H                     0.118513
+     44 C                    -0.181436
+     45 C                    -0.156277
+     46 H                     0.131217
+     47 C                    -0.129697
+     48 H                     0.121048
+     49 C                    -0.198382
+     50 H                     0.122803
+     51 C                    -0.136739
+     52 H                     0.120951
+     53 C                    -0.128321
+     54 H                     0.118066
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  7:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.292792
+      2 C                    -0.156776
+      3 N                    -0.357352
+      4 H                     0.108541
+      5 H                     0.112179
+      6 H                     0.149926
+      7 H                     0.102273
+      8 C                    -0.085361
+      9 H                     0.102451
+     10 H                     0.109760
+     11 H                     0.121139
+     12 C                    -0.350091
+     13 H                     0.108493
+     14 H                     0.121638
+     15 H                     0.121761
+     16 C                    -0.090594
+     17 H                     0.105361
+     18 H                     0.152512
+     19 C                    -0.337203
+     20 H                     0.112750
+     21 H                     0.115135
+     22 H                     0.113972
+     23 C                    -0.012934
+     24 C                    -0.129893
+     25 H                     0.121987
+     26 C                    -0.147785
+     27 H                     0.121210
+     28 C                    -0.109257
+     29 H                     0.123556
+     30 C                    -0.158423
+     31 H                     0.121111
+     32 C                    -0.118545
+     33 H                     0.122327
+     34 C                    -0.101598
+     35 C                    -0.097170
+     36 H                     0.113152
+     37 C                    -0.081008
+     38 H                     0.120333
+     39 C                    -0.027186
+     40 C                    -0.061298
+     41 H                     0.119928
+     42 C                    -0.085304
+     43 H                     0.117452
+     44 C                    -0.055496
+     45 C                    -0.130925
+     46 H                     0.131559
+     47 C                    -0.115223
+     48 H                     0.121263
+     49 C                    -0.115438
+     50 H                     0.123960
+     51 C                    -0.117002
+     52 H                     0.121195
+     53 C                    -0.121219
+     54 H                     0.118946
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  8:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.268290
+      2 C                    -0.146418
+      3 N                    -0.007041
+      4 H                     0.107800
+      5 H                     0.112612
+      6 H                     0.161308
+      7 H                     0.107118
+      8 C                    -0.074430
+      9 H                     0.129654
+     10 H                     0.113628
+     11 H                     0.122623
+     12 C                    -0.347086
+     13 H                     0.097652
+     14 H                     0.119659
+     15 H                     0.122558
+     16 C                    -0.081778
+     17 H                     0.105565
+     18 H                     0.173468
+     19 C                    -0.323842
+     20 H                     0.115516
+     21 H                     0.114962
+     22 H                     0.115842
+     23 C                    -0.018383
+     24 C                    -0.111667
+     25 H                     0.122442
+     26 C                    -0.127057
+     27 H                     0.121934
+     28 C                    -0.122106
+     29 H                     0.123746
+     30 C                    -0.134797
+     31 H                     0.121898
+     32 C                    -0.114127
+     33 H                     0.119895
+     34 C                    -0.121657
+     35 C                    -0.130235
+     36 H                     0.113974
+     37 C                    -0.117109
+     38 H                     0.118559
+     39 C                    -0.043939
+     40 C                    -0.099409
+     41 H                     0.117240
+     42 C                    -0.107452
+     43 H                     0.119276
+     44 C                    -0.096004
+     45 C                    -0.193448
+     46 H                     0.130510
+     47 C                    -0.181102
+     48 H                     0.120113
+     49 C                    -0.164568
+     50 H                     0.123343
+     51 C                    -0.173677
+     52 H                     0.120149
+     53 C                    -0.205188
+     54 H                     0.117769
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State  9:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.286407
+      2 C                    -0.152842
+      3 N                    -0.275388
+      4 H                     0.108041
+      5 H                     0.112374
+      6 H                     0.151872
+      7 H                     0.103336
+      8 C                    -0.081561
+      9 H                     0.105591
+     10 H                     0.106428
+     11 H                     0.119860
+     12 C                    -0.349230
+     13 H                     0.104962
+     14 H                     0.121395
+     15 H                     0.121900
+     16 C                    -0.089281
+     17 H                     0.100481
+     18 H                     0.157106
+     19 C                    -0.334511
+     20 H                     0.112414
+     21 H                     0.114983
+     22 H                     0.112702
+     23 C                     0.014919
+     24 C                    -0.088234
+     25 H                     0.122612
+     26 C                    -0.129625
+     27 H                     0.121866
+     28 C                    -0.104132
+     29 H                     0.123280
+     30 C                    -0.111892
+     31 H                     0.122041
+     32 C                    -0.128597
+     33 H                     0.120291
+     34 C                    -0.164552
+     35 C                    -0.152729
+     36 H                     0.114070
+     37 C                    -0.117073
+     38 H                     0.119975
+     39 C                    -0.087383
+     40 C                    -0.085659
+     41 H                     0.119397
+     42 C                    -0.095948
+     43 H                     0.118752
+     44 C                    -0.035716
+     45 C                    -0.150621
+     46 H                     0.130900
+     47 C                    -0.098717
+     48 H                     0.121377
+     49 C                    -0.114041
+     50 H                     0.123412
+     51 C                    -0.120438
+     52 H                     0.121120
+     53 C                    -0.111408
+     54 H                     0.118528
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+         RPA Excited State 10:  Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.262677
+      2 C                    -0.134639
+      3 N                     0.083486
+      4 H                     0.079063
+      5 H                     0.100685
+      6 H                     0.152847
+      7 H                     0.097214
+      8 C                    -0.040559
+      9 H                     0.021321
+     10 H                     0.066902
+     11 H                     0.106451
+     12 C                    -0.341340
+     13 H                     0.108041
+     14 H                     0.103939
+     15 H                     0.108420
+     16 C                    -0.055054
+     17 H                     0.025337
+     18 H                     0.173297
+     19 C                    -0.305684
+     20 H                     0.098983
+     21 H                     0.103701
+     22 H                     0.078862
+     23 C                    -0.034125
+     24 C                    -0.181916
+     25 H                     0.121058
+     26 C                    -0.144433
+     27 H                     0.121588
+     28 C                    -0.144701
+     29 H                     0.123370
+     30 C                    -0.200666
+     31 H                     0.120596
+     32 C                    -0.125753
+     33 H                     0.103377
+     34 C                    -0.095663
+     35 C                    -0.135077
+     36 H                     0.114539
+     37 C                    -0.108604
+     38 H                     0.119050
+     39 C                    -0.023536
+     40 C                    -0.079635
+     41 H                     0.110928
+     42 C                    -0.127113
+     43 H                     0.118153
+     44 C                    -0.055029
+     45 C                    -0.123702
+     46 H                     0.131200
+     47 C                    -0.111940
+     48 H                     0.121188
+     49 C                    -0.116294
+     50 H                     0.123778
+     51 C                    -0.110329
+     52 H                     0.120792
+     53 C                    -0.117449
+     54 H                     0.117751
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.1007      Y      -0.2131      Z      -0.0205
+       Tot       0.2366
+    Quadrupole Moments (Debye-Ang)
+        XX    -136.4265     XY      -5.7030     YY    -157.2304
+        XZ      -3.3246     YZ     -11.0278     ZZ    -143.9535
+    Octopole Moments (Debye-Ang^2)
+       XXX    -160.7964    XXY    -193.2582    XYY     -96.4876
+       YYY    -605.1984    XXZ     -91.7849    XYZ       1.2945
+       YYZ    -128.2782    XZZ     -43.2141    YZZ    -203.2176
+       ZZZ    -312.5884
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX   -7870.2058   XXXY     539.4711   XXYY   -2213.7556
+      XYYY     816.4718   YYYY   -4486.7487   XXXZ     -25.8993
+      XXYZ    -334.5599   XYYZ      78.7225   YYYZ    -894.3545
+      XXZZ   -1772.0859   XYZZ     267.3547   YYZZ   -1137.2110
+      XZZZ      65.9709   YZZZ    -824.3468   ZZZZ   -2380.4961
+ -----------------------------------------------------------------
+ Total job time:  895.72s(wall), 14549.93s(cpu) 
+ Fri Nov 25 08:47:32 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
+remove work dirs /tmp/SLURM_12490498/qchem31625.0 -- /tmp/SLURM_12490498/qchem31625.-1
+rm -rf /tmp/SLURM_12490498/qchem31625
