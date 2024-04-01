@@ -1,0 +1,1900 @@
+==========================================
+SLURM_JOB_ID = 12485930
+SLURM_JOB_NODELIST = a03-16
+TMPDIR = /tmp/SLURM_12485930
+==========================================
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) pmix/3.1.3
+
+-------------------------------------------------------------------------------
+There are messages associated with the following module(s):
+-------------------------------------------------------------------------------
+
+anaconda3/2021.05:
+   This module is deprecated and will be removed in mid-December. Please use
+   module load conda instead and run conda init bash again to update your
+   shell to use the newer version of conda. Your conda environments will not
+   be impacted.
+
+-------------------------------------------------------------------------------
+
+a03-16.hpc.usc.edu
+You are running Q-Chem version: 5.4.2
+
+#
+# job setting
+#
+local host:  a03-16.hpc.usc.edu
+current dir: /scratch2/patraa/workflow/cyclohexane/wB97_6311g_opt/emission/emission_fsm/fsm_all
+input file:  e_5.87_1.0_-1.inp
+output file: 
+nprocs     : 0
+nthreads   : 32
+#
+# qchem installation setting
+#
+QC:          /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp
+QCAUX:       /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/qcaux
+QCPROG:      /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s
+QCPROG_S:    /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s
+PARALLEL:    -DSERIAL
+QCMPI:       
+#
+# qchem directory setting
+#
+qcrun:       qchem9490
+QCSCRATCH:   /scratch1/patraa
+QCLOCALSCR:  /tmp/SLURM_12485930
+QCTMPDIR:    /tmp/SLURM_12485930
+QCFILEPREF:  /tmp/SLURM_12485930/qchem9490
+QCSAVEDIR:   
+workdirs:    /tmp/SLURM_12485930/qchem9490
+workdir0:    /tmp/SLURM_12485930/qchem9490
+partmpdirs =  
+#
+# parallel setting
+#
+QCRSH:           ssh
+QCMPI:           mpich
+QCMPIRUN:        /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/bin/mpi/mpirun_qchem
+QCMACHINEFILE:   /tmp/SLURM_12485930/qchem9490/hostfile
+
+#
+# env setting
+#
+exported envs:   QC QCAUX QCSCRATCH QCRUNNAME QCFILEPREF QCPROG QCPROG_S GUIFILE
+
+Running Job 1 of 2 e_5.87_1.0_-1.inp
+qchem e_5.87_1.0_-1.inp_9490.0 /tmp/SLURM_12485930/qchem9490/ 0
+/spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s e_5.87_1.0_-1.inp_9490.0 /tmp/SLURM_12485930/qchem9490/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4, Q-Chem, Inc., Pleasanton, CA (2021)
+
+ License issued to: University of Southern California
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ Romit Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  T. Neudecker,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  R. P. Steele,  J. E. Subotnik,  A. J. W. Thom,  
+ A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  T. A. Wesolowski,  
+ K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  S. Faraji,  
+ P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors since Version 5.4.0: 
+ Chandrima Chakravarty,  L. Cunha,  R. Kang,  Yongbin Kim,  S. Kotaru,  
+ Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  V. Parravicini,  
+ Haisheng Ren,  Hengyuan Shen,  Yingli Su,  Hung-Yi Tsai,  C. Utku,  
+ Fang Wang,  Jeff Yang,  F. Zeller
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  Arup K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+   Please cite Q-Chem as follows:
+  "Software for the frontiers of quantum chemistry:
+   An overview of developments in the Q-Chem 5 package"
+   J. Chem. Phys. 155, 084801 (2021)
+   https://doi.org/10.1063/5.0055522 (open access)
+
+ Q-Chem 5.4.2 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Nov 24 19:27:02 2022  
+
+ Host: 
+0
+
+     Scratch files written to /tmp/SLURM_12485930/qchem9490//
+ Dec1321 |scratch|qcdevops|jenkins|workspace|build_RNUM 6013   
+ Processing $rem in /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/config/preferences:
+ Processing $rem in /home1/patraa/.qchemrc:
+ Symmetry turned off for PCM/SM12/SMD calculation
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+$molecule
+0 1
+C      2.6302422690      4.5765983056      1.0360202725
+C      3.1071480250      3.1430577752      0.7673265751
+N      4.5334035432      2.9890617388      0.8622862533
+H      2.9892113727      4.9409467179      2.0008032062
+H      2.9537872810      5.2645393087      0.2538926867
+H      2.6317974116      2.4553749962      1.4591842251
+H      1.5403493137      4.5648944767      1.0505166773
+C      5.2024568383      2.5139461408      2.0495656330
+H      5.9559415752      3.2618408306      2.3176602297
+H      5.7699332778      1.6195021251      1.7424613648
+H      2.8117806646      2.8382123665     -0.2394602148
+C      4.3140132009      2.2004401360      3.2356136063
+H      3.6270033264      1.3831386944      3.0161055749
+H      4.9541899818      1.8820196823      4.0595389144
+H      3.7454689823      3.0734971016      3.5645536214
+C      5.3780750485      3.5485901120     -0.1828762817
+H      6.1946384201      2.8444806550     -0.3396512830
+H      4.7853605209      3.5842421439     -1.0958940581
+C      5.9378655668      4.9325889923      0.1572387181
+H      6.5264956013      5.2796105516     -0.6928263085
+H      5.1470152688      5.6583038434      0.3458344090
+H      6.5946675674      4.8983471774      1.0278931962
+C      3.7554601108     -0.0640961787      0.2327306623
+C      4.7465138465      0.3097951638     -0.7400803491
+H      4.4378777251      0.7572281445     -1.6772901296
+C      6.0950747576      0.1288932857     -0.5115775444
+H      6.8049182994      0.4347275260     -1.2752815690
+C      6.5665241779     -0.4245017893      0.6853467350
+H      7.6260152386     -0.5747059256      0.8540031922
+C      5.6109672677     -0.8890618448      1.6173911206
+H      5.9466869661     -1.3917553687      2.5195352877
+C      4.2655963308     -0.7208654212      1.4044958372
+H      3.5737852142     -1.1178254042      2.1382212210
+C      2.3716345813      0.2363947452      0.0620982677
+C      1.8415616448      0.7548619152     -1.1638243261
+H      2.4493149872      0.7468143044     -2.0611856804
+C      0.5532214146      1.2313896170     -1.2596539304
+H      0.2057647987      1.5896849016     -2.2241293555
+C     -0.3349722567      1.2280006827     -0.1664675698
+C      0.1499220726      0.6455221714      1.0257755442
+H     -0.4927584665      0.6076631432      1.9000884446
+C      1.4316045237      0.1620744934      1.1391261081
+H      1.7424332300     -0.2392197523      2.0968717538
+C     -1.6893490338      1.7893253875     -0.2669867802
+C     -2.7487499627      1.3077685764      0.5206571177
+H     -2.5764839422      0.4787272700      1.1979814690
+C     -4.0226689509      1.8498788211      0.4287460108
+H     -4.8185438745      1.4500349884      1.0482111883
+C     -4.2888007710      2.8864604469     -0.4607092354
+H     -5.2850833021      3.3073930200     -0.5344232119
+C     -3.2549931828      3.3749305308     -1.2530048250
+H     -3.4421966267      4.1863919163     -1.9485077327
+C     -1.9779952056      2.8409291645     -1.1535780011
+H     -1.1826246694      3.2609085964     -1.7594627376
+$end
+
+$rem
+basis = 6-311g**
+method = wb97xd
+job_type = sp
+cis_n_roots = 10
+cis_singlets = 1
+cis_triplets = 0
+rpa = 2
+solvent_method = pcm
+symmetry = false
+symmetry_ignore = 1
+cis_dynamic_mem = true
+cis_relaxed_density = true
+use_new_functional = true
+pcm_print = 1
+$end
+
+$pcm
+chargeseparation excited
+statespecific 1
+$end
+
+$solvent
+dielectric 2.03
+opticaldielectric 2.01
+$end
+
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       2.6302422690     4.5765983056     1.0360202725
+    2      C       3.1071480250     3.1430577752     0.7673265751
+    3      N       4.5334035432     2.9890617388     0.8622862533
+    4      H       2.9892113727     4.9409467179     2.0008032062
+    5      H       2.9537872810     5.2645393087     0.2538926867
+    6      H       2.6317974116     2.4553749962     1.4591842251
+    7      H       1.5403493137     4.5648944767     1.0505166773
+    8      C       5.2024568383     2.5139461408     2.0495656330
+    9      H       5.9559415752     3.2618408306     2.3176602297
+   10      H       5.7699332778     1.6195021251     1.7424613648
+   11      H       2.8117806646     2.8382123665    -0.2394602148
+   12      C       4.3140132009     2.2004401360     3.2356136063
+   13      H       3.6270033264     1.3831386944     3.0161055749
+   14      H       4.9541899818     1.8820196823     4.0595389144
+   15      H       3.7454689823     3.0734971016     3.5645536214
+   16      C       5.3780750485     3.5485901120    -0.1828762817
+   17      H       6.1946384201     2.8444806550    -0.3396512830
+   18      H       4.7853605209     3.5842421439    -1.0958940581
+   19      C       5.9378655668     4.9325889923     0.1572387181
+   20      H       6.5264956013     5.2796105516    -0.6928263085
+   21      H       5.1470152688     5.6583038434     0.3458344090
+   22      H       6.5946675674     4.8983471774     1.0278931962
+   23      C       3.7554601108    -0.0640961787     0.2327306623
+   24      C       4.7465138465     0.3097951638    -0.7400803491
+   25      H       4.4378777251     0.7572281445    -1.6772901296
+   26      C       6.0950747576     0.1288932857    -0.5115775444
+   27      H       6.8049182994     0.4347275260    -1.2752815690
+   28      C       6.5665241779    -0.4245017893     0.6853467350
+   29      H       7.6260152386    -0.5747059256     0.8540031922
+   30      C       5.6109672677    -0.8890618448     1.6173911206
+   31      H       5.9466869661    -1.3917553687     2.5195352877
+   32      C       4.2655963308    -0.7208654212     1.4044958372
+   33      H       3.5737852142    -1.1178254042     2.1382212210
+   34      C       2.3716345813     0.2363947452     0.0620982677
+   35      C       1.8415616448     0.7548619152    -1.1638243261
+   36      H       2.4493149872     0.7468143044    -2.0611856804
+   37      C       0.5532214146     1.2313896170    -1.2596539304
+   38      H       0.2057647987     1.5896849016    -2.2241293555
+   39      C      -0.3349722567     1.2280006827    -0.1664675698
+   40      C       0.1499220726     0.6455221714     1.0257755442
+   41      H      -0.4927584665     0.6076631432     1.9000884446
+   42      C       1.4316045237     0.1620744934     1.1391261081
+   43      H       1.7424332300    -0.2392197523     2.0968717538
+   44      C      -1.6893490338     1.7893253875    -0.2669867802
+   45      C      -2.7487499627     1.3077685764     0.5206571177
+   46      H      -2.5764839422     0.4787272700     1.1979814690
+   47      C      -4.0226689509     1.8498788211     0.4287460108
+   48      H      -4.8185438745     1.4500349884     1.0482111883
+   49      C      -4.2888007710     2.8864604469    -0.4607092354
+   50      H      -5.2850833021     3.3073930200    -0.5344232119
+   51      C      -3.2549931828     3.3749305308    -1.2530048250
+   52      H      -3.4421966267     4.1863919163    -1.9485077327
+   53      C      -1.9779952056     2.8409291645    -1.1535780011
+   54      H      -1.1826246694     3.2609085964    -1.7594627376
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =        2142.17005053 hartrees
+ There are       90 alpha and       90 beta electrons
+ Requested basis set is 6-311G(d,p)
+ There are 241 shells and 624 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ Discretize the solute cavity surface with Lebedev spheres
+	Using 110 Lebedev grid points for each H atom
+	Using 194 Lebedev grid points for other atoms
+	Atomic van der Waals radii will be scaled by 1.20
+ Remove points where switching function is < 1.0e-08
+ Keep 3154 surface tesserae and discard 4886 interior tesserae
+ Molecular Surface Area = 398.715 Angst**2
+ A cutoff of  1.0D-11 yielded  16963 shell pairs
+ There are    114049 function pairs (    122938 Cartesian)
+ Smallest overlap matrix eigenvalue = 1.28E-04
+
+ Scale SEOQF with 1.000000e-02/1.000000e-02/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000134 hartrees
+ Guess from superposition of atomic densities
+ Warning:  Energy on first SCF cycle will be non-variational
+ SAD guess density has 180.000000 electrons
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.2220 Hartree-Fock + 1.0000 wB97X-D + LR-HF
+ Correlation:  1.0000 wB97X-D
+ Using SG-2 standard quadrature grid
+ Dispersion:   Grimme D
+ using 32 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+ BuildS Time: 0.41 s (CPU) 0.01 s (wall)
+ Time req'd to invert C: 25.62 s (CPU) 0.83 s (wall)
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.114043e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.694192e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852466e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.694192e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1851.18733888 a.u. = 1161637.58774159 kcal/mol
+  qe-ESPN =    1851.18733888 a.u. = 1161637.58774159 kcal/mol
+  qe-ESPe =   -1851.87753176 a.u. = -1162070.69031409 kcal/mol
+  -------
+  q-ESPN  =       0.66517678 a.u. =     417.40473183 kcal/mol
+  q-ESPe  =      -0.69019289 a.u. =    -433.10257250 kcal/mol
+---------------------------------------------------------------
+    1    -994.6360246083      2.78e-02  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113552e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -2.185249e-02
+ Electronic Surface Charge Gauss Law Error =   -1.901572e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -2.185249e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.29247596 a.u. = 1161076.05278623 kcal/mol
+  qe-ESPN =    1850.29247596 a.u. = 1161076.05278623 kcal/mol
+  qe-ESPe =   -1850.07061835 a.u. = -1160936.83503190 kcal/mol
+  -------
+  q-ESPN  =      -0.22968613 a.u. =    -144.13022353 kcal/mol
+  q-ESPe  =       0.22185761 a.u. =     139.21775433 kcal/mol
+---------------------------------------------------------------
+    2    -986.4552452284      1.93e-03  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113831e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.906914e-02
+ Electronic Surface Charge Gauss Law Error =   -1.873739e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.906914e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.68489865 a.u. = 1161322.30173767 kcal/mol
+  qe-ESPN =    1850.68489865 a.u. = 1161322.30173767 kcal/mol
+  qe-ESPe =   -1850.86031039 a.u. = -1161432.37426881 kcal/mol
+  -------
+  q-ESPN  =       0.16273655 a.u. =     102.11872791 kcal/mol
+  q-ESPe  =      -0.17541174 a.u. =    -110.07253114 kcal/mol
+---------------------------------------------------------------
+    3    -986.5694150841      1.37e-03  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113838e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.899747e-02
+ Electronic Surface Charge Gauss Law Error =   -1.873022e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.899747e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.71294766 a.u. = 1161339.90275938 kcal/mol
+  qe-ESPN =    1850.71294766 a.u. = 1161339.90275938 kcal/mol
+  qe-ESPe =   -1850.91714447 a.u. = -1161468.03819055 kcal/mol
+  -------
+  q-ESPN  =       0.19078557 a.u. =     119.71974962 kcal/mol
+  q-ESPe  =      -0.20419681 a.u. =    -128.13543117 kcal/mol
+---------------------------------------------------------------
+    4    -986.6550068302      2.10e-04  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113838e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.899673e-02
+ Electronic Surface Charge Gauss Law Error =   -1.873014e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.899673e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69343218 a.u. = 1161327.65661287 kcal/mol
+  qe-ESPN =    1850.69343218 a.u. = 1161327.65661287 kcal/mol
+  qe-ESPe =   -1850.87774618 a.u. = -1161443.31538996 kcal/mol
+  -------
+  q-ESPN  =       0.17127009 a.u. =     107.47360311 kcal/mol
+  q-ESPe  =      -0.18431399 a.u. =    -115.65877709 kcal/mol
+---------------------------------------------------------------
+    5    -986.6565739583      1.21e-04  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113840e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897918e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872839e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897918e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69527989 a.u. = 1161328.81606800 kcal/mol
+  qe-ESPN =    1850.69527989 a.u. = 1161328.81606801 kcal/mol
+  qe-ESPe =   -1850.88147751 a.u. = -1161445.65683871 kcal/mol
+  -------
+  q-ESPN  =       0.17311780 a.u. =     108.63305825 kcal/mol
+  q-ESPe  =      -0.18619762 a.u. =    -116.84077070 kcal/mol
+---------------------------------------------------------------
+    6    -986.6572046334      1.82e-05  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113840e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897339e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872781e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897339e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69716687 a.u. = 1161330.00016275 kcal/mol
+  qe-ESPN =    1850.69716687 a.u. = 1161330.00016275 kcal/mol
+  qe-ESPe =   -1850.88527351 a.u. = -1161448.03885982 kcal/mol
+  -------
+  q-ESPN  =       0.17500477 a.u. =     109.81715299 kcal/mol
+  q-ESPe  =      -0.18810664 a.u. =    -118.03869707 kcal/mol
+---------------------------------------------------------------
+    7    -986.6572221740      6.53e-06  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897128e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872760e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897128e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69691585 a.u. = 1161329.84264641 kcal/mol
+  qe-ESPN =    1850.69691585 a.u. = 1161329.84264641 kcal/mol
+  qe-ESPe =   -1850.88477926 a.u. = -1161447.72871796 kcal/mol
+  -------
+  q-ESPN  =       0.17475376 a.u. =     109.65963665 kcal/mol
+  q-ESPe  =      -0.18786341 a.u. =    -117.88607154 kcal/mol
+---------------------------------------------------------------
+    8    -986.6572249030      2.93e-06  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897048e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872752e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897048e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69699749 a.u. = 1161329.89387866 kcal/mol
+  qe-ESPN =    1850.69699749 a.u. = 1161329.89387865 kcal/mol
+  qe-ESPe =   -1850.88494098 a.u. = -1161447.83019782 kcal/mol
+  -------
+  q-ESPN  =       0.17483540 a.u. =     109.71086889 kcal/mol
+  q-ESPe  =      -0.18794349 a.u. =    -117.93631917 kcal/mol
+---------------------------------------------------------------
+    9    -986.6572255748      9.49e-07  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897044e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872751e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897044e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69700521 a.u. = 1161329.89872026 kcal/mol
+  qe-ESPN =    1850.69700521 a.u. = 1161329.89872026 kcal/mol
+  qe-ESPe =   -1850.88495686 a.u. = -1161447.84015984 kcal/mol
+  -------
+  q-ESPN  =       0.17484311 a.u. =     109.71571050 kcal/mol
+  q-ESPe  =      -0.18795165 a.u. =    -117.94143958 kcal/mol
+---------------------------------------------------------------
+   10    -986.6572256607      2.67e-07  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897051e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872752e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897051e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69701792 a.u. = 1161329.90669760 kcal/mol
+  qe-ESPN =    1850.69701792 a.u. = 1161329.90669760 kcal/mol
+  qe-ESPe =   -1850.88498236 a.u. = -1161447.85616055 kcal/mol
+  -------
+  q-ESPN  =       0.17485583 a.u. =     109.72368784 kcal/mol
+  q-ESPe  =      -0.18796443 a.u. =    -117.94946295 kcal/mol
+---------------------------------------------------------------
+   11    -986.6572256726      9.74e-08  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897056e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872753e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897056e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69700468 a.u. = 1161329.89838605 kcal/mol
+  qe-ESPN =    1850.69700468 a.u. = 1161329.89838605 kcal/mol
+  qe-ESPe =   -1850.88495571 a.u. = -1161447.83943880 kcal/mol
+  -------
+  q-ESPN  =       0.17484258 a.u. =     109.71537630 kcal/mol
+  q-ESPe  =      -0.18795103 a.u. =    -117.94105275 kcal/mol
+---------------------------------------------------------------
+   12    -986.6572256743      3.70e-08  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897057e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872753e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897057e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69700785 a.u. = 1161329.90037587 kcal/mol
+  qe-ESPN =    1850.69700785 a.u. = 1161329.90037587 kcal/mol
+  qe-ESPe =   -1850.88496202 a.u. = -1161447.84340012 kcal/mol
+  -------
+  q-ESPN  =       0.17484575 a.u. =     109.71736611 kcal/mol
+  q-ESPe  =      -0.18795417 a.u. =    -117.94302425 kcal/mol
+---------------------------------------------------------------
+   13    -986.6572256745      1.21e-08  
+   14    -986.6572256747      5.24e-09  Convergence criterion met
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113841e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.897057e-02
+ Electronic Surface Charge Gauss Law Error =   -1.872753e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.897057e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.69700616 a.u. = 1161329.89931763 kcal/mol
+  qe-ESPN =    1850.69700616 a.u. = 1161329.89931763 kcal/mol
+  qe-ESPe =   -1850.88495864 a.u. = -1161447.84127917 kcal/mol
+  -------
+  q-ESPN  =       0.17484407 a.u. =     109.71630787 kcal/mol
+  q-ESPe  =      -0.18795248 a.u. =    -117.94196154 kcal/mol
+---------------------------------------------------------------
+ ---------------------------------------
+ SCF time:   CPU 1944.48s  wall 120.00s 
+
+************** Final PCM Free Energy Summary **************
+ G_electrostatic  =      -0.00655421 hartree =      -4.11282683 kcal/mol
+ G_cavitation     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_dispersion     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_repulsion      =       0.00000000 hartree =       0.00000000 kcal/mol
+ --------------------------------------------------
+ Non-electrostatic Free Energy =       0.00000000 hartree =       0.00000000 kcal/mol
+ Total                         =      -0.00655421 hartree =      -4.11282683 kcal/mol
+ --------------------------------------------------
+ SCF Energy (H0 + V/2)                       =    -986.65722567 
+ Solute Internal Energy (H0)                 =    -986.65067147 
+ Total Free Energy (H0 + V/2 + non-elec)     =    -986.65722567 hartree
+                                             = -619136.75374146 kcal/mol
+***********************************************************
+
+ SCF   energy in the final basis set =     -986.6572256747
+ Total energy in the final basis set =     -986.6572256747
+ 
+ MAX_CIS_SUBSPACE fits in available memory
+ Adding PCM contribution to the XC response (LR-PCM)
+ CIS energy converged when residual is below 10e- 6
+
+ Direct TDDFT calculation will be performed
+ Exchange:     0.2220 Hartree-Fock + 1.0000 wB97X-D + LR-HF
+ Correlation:  1.0000 wB97X-D
+ Using SG-2 standard quadrature grid
+ Dispersion:   Grimme D
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0          10      0.004339    0.000706
+   2         0          10      0.001593    0.000247
+   3         0          10      0.001460    0.000251
+   4         0          10      0.000968    0.000188
+   5         0          10      0.000646    0.000142
+   6         0          10      0.000377    0.000080
+   7         0          10      0.000200    0.000049
+   8         0          10      0.000124    0.000040
+   9         2           8      0.000055    0.000013
+  10         4           6      0.000036    0.000012
+  11         5           5      0.000019    0.000007
+  12         6           4      0.000012    0.000003
+  13         8           2      0.000008    0.000002
+  14        10           0      0.000007    0.000001    Roots Converged
+ ---------------------------------------------------
+ 
+ ---------------------------------------------------
+             TDDFT Excitation Energies              
+ ---------------------------------------------------
+
+ Excited state   1: excitation energy (eV) =    3.0145
+ Total energy for state  1:                  -986.54644658 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  1.1139 X  -0.2666 Y   0.1124 Z
+    Strength   :     0.0978115057
+    X: D(   90) --> V(    1) amplitude =  0.9631
+    X: D(   90) --> V(    3) amplitude = -0.2425
+
+ Excited state   2: excitation energy (eV) =    3.9928
+ Total energy for state  2:                  -986.51049253 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -3.1625 X   0.8484 Y  -0.3750 Z
+    Strength   :     1.0625198977
+    X: D(   89) --> V(    1) amplitude =  0.9679
+
+ Excited state   3: excitation energy (eV) =    4.1608
+ Total energy for state  3:                  -986.50432038 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.4786 X   0.2660 Y  -0.0963 Z
+    Strength   :     0.0315114729
+    X: D(   90) --> V(    2) amplitude =  0.8232
+    X: D(   90) --> V(    4) amplitude = -0.3914
+    X: D(   90) --> V(    5) amplitude = -0.2884
+
+ Excited state   4: excitation energy (eV) =    4.6832
+ Total energy for state  4:                  -986.48511995 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0541 X   0.0579 Y   0.0456 Z
+    Strength   :     0.0009585984
+    X: D(   85) --> V(    1) amplitude = -0.4824
+    X: D(   86) --> V(    1) amplitude = -0.2316
+    X: D(   89) --> V(    2) amplitude =  0.5403
+    X: D(   89) --> V(    5) amplitude =  0.2414
+    X: D(   90) --> V(    5) amplitude = -0.4557
+
+ Excited state   5: excitation energy (eV) =    4.9247
+ Total energy for state  5:                  -986.47624675 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0900 X   0.0466 Y  -0.1148 Z
+    Strength   :     0.0028286519
+    X: D(   87) --> V(    1) amplitude =  0.4987
+    X: D(   88) --> V(    1) amplitude =  0.2614
+    X: D(   89) --> V(    2) amplitude =  0.3681
+    X: D(   90) --> V(    2) amplitude =  0.3879
+    X: D(   90) --> V(    5) amplitude =  0.3774
+
+ Excited state   6: excitation energy (eV) =    5.1306
+ Total energy for state  6:                  -986.46868068 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0007 X  -0.0538 Y   0.1226 Z
+    Strength   :     0.0022533280
+    X: D(   85) --> V(    1) amplitude = -0.3553
+    X: D(   86) --> V(    1) amplitude =  0.4275
+    X: D(   86) --> V(    3) amplitude =  0.3680
+    X: D(   88) --> V(    4) amplitude =  0.3146
+    X: D(   89) --> V(    4) amplitude = -0.4546
+
+ Excited state   7: excitation energy (eV) =    5.1566
+ Total energy for state  7:                  -986.46772352 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.0034 X  -0.2659 Y   0.2447 Z
+    Strength   :     0.0164932745
+    X: D(   90) --> V(    3) amplitude =  0.6350
+    X: D(   90) --> V(    5) amplitude =  0.4541
+    X: D(   90) --> V(    6) amplitude =  0.3098
+
+ Excited state   8: excitation energy (eV) =    5.1899
+ Total energy for state  8:                  -986.46650014 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.1399 X   0.1976 Y  -0.3641 Z
+    Strength   :     0.0243126009
+    X: D(   85) --> V(    1) amplitude =  0.4264
+    X: D(   86) --> V(    1) amplitude =  0.2146
+    X: D(   89) --> V(    5) amplitude = -0.2730
+    X: D(   90) --> V(    3) amplitude =  0.4683
+    X: D(   90) --> V(    5) amplitude = -0.4314
+    X: D(   90) --> V(    6) amplitude =  0.2205
+
+ Excited state   9: excitation energy (eV) =    5.4171
+ Total energy for state  9:                  -986.45815210 au
+    Multiplicity: Singlet 
+    Trans. Mom.:  0.4823 X  -0.3380 Y  -0.0137 Z
+    Strength   :     0.0460636458
+    X: D(   87) --> V(    1) amplitude = -0.3835
+    X: D(   88) --> V(    1) amplitude =  0.6174
+    X: D(   89) --> V(    3) amplitude = -0.5019
+    X: D(   90) --> V(    3) amplitude = -0.2559
+    X: D(   90) --> V(    6) amplitude = -0.2196
+
+ Excited state  10: excitation energy (eV) =    5.5474
+ Total energy for state 10:                  -986.45336264 au
+    Multiplicity: Singlet 
+    Trans. Mom.: -0.0684 X  -0.2125 Y  -0.1408 Z
+    Strength   :     0.0094676304
+    X: D(   85) --> V(    1) amplitude =  0.2855
+    X: D(   86) --> V(    1) amplitude =  0.2129
+    X: D(   87) --> V(    1) amplitude = -0.4900
+    X: D(   88) --> V(    1) amplitude = -0.3504
+    X: D(   89) --> V(    2) amplitude =  0.6451
+ 
+ ---------------------------------------------------
+ Calculating Relaxed Density
+ ---------------------------------------------------
+ Iter    Rts Conv    Rts Left    Ttl Dev     Max Dev
+ ---------------------------------------------------
+   1         0          10      0.000981    0.000188
+   2         0          10      0.000294    0.000057
+   3         0          10      0.000082    0.000016
+   4         0          10      0.000025    0.000005
+   5         6           4      0.000005    0.000001
+   6        10           0      0.000000    0.000000    Roots Converged
+ ---------------------------------------------------
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.132568e+01
+ Theoretical Nuclear Surface Charge        =   -9.132568e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.113881e+01
+ Total Nuclear Surface Charge              =   -9.115738e+01
+ Total Surface Charge                      =   -1.856597e-02
+ Electronic Surface Charge Gauss Law Error =   -1.868707e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.683047e-01
+ Total Surface Charge Gauss Law Error      =   -1.856597e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1850.52216209 a.u. = -1161220.18300976 kcal/mol
+  qN-ESPe =    1850.63080968 a.u. = 1161288.36040034 kcal/mol
+  qe-ESPN =    1850.63080968 a.u. = 1161288.36040034 kcal/mol
+  qe-ESPe =   -1850.76874796 a.u. = -1161374.91797462 kcal/mol
+  -------
+  q-ESPN  =       0.10864759 a.u. =      68.17739058 kcal/mol
+  q-ESPe  =      -0.13793828 a.u. =     -86.55757428 kcal/mol
+---------------------------------------------------------------
+
+----------------Fast/Slow Charge Separation--------------------
+  PCM Fast Charges                         =   -1.820543e-02
+  PCM Slow Charges                         =   -3.605393e-04
+ |PCM Fast Charges|                        =    8.972484e-01
+ |PCM Slow Charges|                        =    1.776905e-02
+----------------Fast/Slow Charge Separation--------------------
+
+  SETman timing summary (seconds)
+  CPU time             12100.74s
+  System time              0.01s
+  Wall time              603.54s
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+-14.3813 -10.3069 -10.3061 -10.3054 -10.3041 -10.2929 -10.2925 -10.2918
+-10.2909 -10.2908 -10.2903 -10.2903 -10.2902 -10.2900 -10.2899 -10.2896
+-10.2894 -10.2888 -10.2877 -10.2876 -10.2837 -10.2816 -10.2620 -10.2553
+-10.2501  -1.0018  -0.9806  -0.9659  -0.9484  -0.8961  -0.8595  -0.8556
+ -0.8528  -0.8495  -0.8455  -0.8445  -0.8084  -0.7946  -0.7413  -0.7240
+ -0.7198  -0.7063  -0.7004  -0.6960  -0.6737  -0.6699  -0.6327  -0.6324
+ -0.6130  -0.5770  -0.5731  -0.5686  -0.5663  -0.5460  -0.5428  -0.5374
+ -0.5366  -0.5226  -0.5185  -0.5123  -0.5106  -0.5086  -0.5010  -0.4985
+ -0.4955  -0.4821  -0.4779  -0.4705  -0.4656  -0.4599  -0.4584  -0.4485
+ -0.4429  -0.4411  -0.4378  -0.4325  -0.4285  -0.4231  -0.4220  -0.4133
+ -0.4073  -0.4013  -0.3961  -0.3746  -0.3381  -0.3356  -0.3335  -0.3329
+ -0.2799  -0.2375
+ -- Virtual --
+ -0.0051   0.0453   0.0562   0.0579   0.0720   0.1090   0.1148   0.1259
+  0.1308   0.1321   0.1386   0.1501   0.1607   0.1625   0.1639   0.1685
+  0.1755   0.1858   0.1868   0.1888   0.1958   0.1990   0.2020   0.2049
+  0.2160   0.2210   0.2255   0.2344   0.2388   0.2430   0.2451   0.2510
+  0.2592   0.2620   0.2637   0.2689   0.2704   0.2761   0.2868   0.2929
+  0.3019   0.3129   0.3154   0.3167   0.3220   0.3253   0.3340   0.3460
+  0.3519   0.3554   0.3593   0.3631   0.3686   0.3710   0.3834   0.3903
+  0.3922   0.3967   0.4007   0.4053   0.4097   0.4158   0.4223   0.4261
+  0.4306   0.4339   0.4440   0.4619   0.4621   0.4669   0.4690   0.4732
+  0.4748   0.4824   0.4912   0.4943   0.4971   0.5005   0.5085   0.5104
+  0.5167   0.5208   0.5231   0.5260   0.5297   0.5313   0.5321   0.5394
+  0.5475   0.5483   0.5537   0.5610   0.5693   0.5817   0.5874   0.5967
+  0.5990   0.6060   0.6131   0.6217   0.6237   0.6285   0.6349   0.6414
+  0.6418   0.6504   0.6509   0.6628   0.6640   0.6673   0.6720   0.6775
+  0.6810   0.6828   0.6857   0.6865   0.6897   0.6915   0.6946   0.7011
+  0.7058   0.7066   0.7103   0.7118   0.7144   0.7161   0.7212   0.7237
+  0.7285   0.7324   0.7372   0.7399   0.7415   0.7434   0.7486   0.7613
+  0.7682   0.7730   0.7776   0.7864   0.7895   0.8005   0.8105   0.8167
+  0.8212   0.8252   0.8325   0.8374   0.8405   0.8481   0.8547   0.8564
+  0.8658   0.8789   0.8826   0.8878   0.8981   0.9039   0.9157   0.9172
+  0.9194   0.9280   0.9333   0.9371   0.9451   0.9456   0.9617   0.9703
+  0.9781   0.9813   0.9939   1.0091   1.0116   1.0282   1.0352   1.0405
+  1.0477   1.0540   1.0666   1.0731   1.0851   1.0907   1.0954   1.0979
+  1.1124   1.1221   1.1307   1.1401   1.1486   1.1530   1.1607   1.1657
+  1.1756   1.1822   1.1873   1.1903   1.2067   1.2133   1.2250   1.2306
+  1.2365   1.2406   1.2430   1.2530   1.2628   1.2842   1.2958   1.3218
+  1.3314   1.3370   1.3507   1.3568   1.3642   1.3745   1.3916   1.3980
+  1.4205   1.4410   1.4660   1.4820   1.4969   1.5025   1.5107   1.5180
+  1.5274   1.5363   1.5388   1.5394   1.5422   1.5478   1.5505   1.5517
+  1.5625   1.5691   1.5746   1.5794   1.5842   1.5910   1.6006   1.6100
+  1.6152   1.6205   1.6241   1.6331   1.6397   1.6435   1.6465   1.6541
+  1.6581   1.6633   1.6675   1.6724   1.6778   1.6823   1.6853   1.6915
+  1.7013   1.7055   1.7112   1.7162   1.7201   1.7272   1.7346   1.7413
+  1.7461   1.7542   1.7592   1.7665   1.7711   1.7724   1.7817   1.7927
+  1.8004   1.8132   1.8204   1.8250   1.8357   1.8391   1.8432   1.8463
+  1.8522   1.8544   1.8609   1.8621   1.8706   1.8738   1.8768   1.8875
+  1.8915   1.8966   1.9059   1.9145   1.9261   1.9357   1.9453   1.9507
+  1.9602   1.9667   1.9738   1.9807   1.9832   1.9873   1.9950   2.0053
+  2.0079   2.0142   2.0179   2.0247   2.0324   2.0352   2.0445   2.0457
+  2.0584   2.0601   2.0641   2.0753   2.0797   2.0883   2.0951   2.0985
+  2.1071   2.1194   2.1240   2.1288   2.1339   2.1530   2.1582   2.1697
+  2.1725   2.1762   2.1785   2.1946   2.2065   2.2130   2.2237   2.2394
+  2.2701   2.2714   2.2813   2.2887   2.3023   2.3171   2.3447   2.3631
+  2.3698   2.3769   2.3813   2.3877   2.3991   2.4038   2.4150   2.4182
+  2.4288   2.4330   2.4399   2.4418   2.4594   2.4678   2.4712   2.4780
+  2.4844   2.4957   2.5034   2.5097   2.5105   2.5170   2.5198   2.5320
+  2.5386   2.5519   2.5620   2.5761   2.5858   2.5955   2.6176   2.6318
+  2.6394   2.6529   2.6583   2.6625   2.6636   2.6746   2.6755   2.6778
+  2.6910   2.6937   2.7011   2.7063   2.7084   2.7163   2.7220   2.7263
+  2.7313   2.7360   2.7464   2.7530   2.7558   2.7640   2.7688   2.7739
+  2.7744   2.7819   2.7867   2.7877   2.7902   2.8010   2.8032   2.8158
+  2.8209   2.8244   2.8293   2.8375   2.8379   2.8470   2.8602   2.8730
+  2.8742   2.8828   2.8905   2.8985   2.9139   2.9178   2.9261   2.9355
+  2.9423   2.9461   2.9556   2.9590   2.9847   2.9855   2.9921   3.0053
+  3.0119   3.0127   3.0212   3.0268   3.0412   3.0433   3.0579   3.0598
+  3.0940   3.0997   3.1096   3.1277   3.1428   3.1662   3.1945   3.2077
+  3.2251   3.2460   3.2797   3.3144   3.3312   3.3368   3.3541   3.3564
+  3.4081   3.4391   3.4433   3.4600   3.5066   3.5142   3.5425   3.5748
+  3.5853   3.5984   3.6177   3.6397   3.6583   3.6768   3.6920   3.7010
+  3.7123   3.7440   3.7634   3.8097   3.8881   3.8991   3.9125   3.9163
+  3.9277   3.9321   3.9451   3.9579   3.9758   3.9892   4.0195   4.0624
+  4.0736   4.1085   4.1291   4.1483   4.1856   4.2266   4.2297   4.2341
+  4.2663   4.2818   4.3084   4.3192   4.3403   4.4314   4.5451   4.7483
+  4.8789   4.9213   4.9541   5.0615   5.1350  23.6032  23.7443  23.8629
+ 23.9859  24.0111  24.0210  24.0327  24.0483  24.0520  24.0611  24.0660
+ 24.0833  24.1048  24.1081  24.1211  24.1373  24.1565  24.1964  24.2424
+ 24.2603  24.2703  24.3152  24.3209  24.3313  35.7316
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.309641
+      2 C                    -0.117561
+      3 N                    -0.410401
+      4 H                     0.107431
+      5 H                     0.110412
+      6 H                     0.134217
+      7 H                     0.103810
+      8 C                    -0.052447
+      9 H                     0.091122
+     10 H                     0.126463
+     11 H                     0.118339
+     12 C                    -0.373727
+     13 H                     0.112838
+     14 H                     0.122104
+     15 H                     0.123223
+     16 C                    -0.145697
+     17 H                     0.112628
+     18 H                     0.114927
+     19 C                    -0.298612
+     20 H                     0.105025
+     21 H                     0.112709
+     22 H                     0.112562
+     23 C                    -0.019124
+     24 C                    -0.077389
+     25 H                     0.116208
+     26 C                    -0.112683
+     27 H                     0.124156
+     28 C                    -0.146969
+     29 H                     0.122226
+     30 C                    -0.109082
+     31 H                     0.119432
+     32 C                    -0.120280
+     33 H                     0.125763
+     34 C                    -0.052347
+     35 C                    -0.120202
+     36 H                     0.122392
+     37 C                    -0.102956
+     38 H                     0.122194
+     39 C                    -0.014698
+     40 C                    -0.110729
+     41 H                     0.119896
+     42 C                    -0.112881
+     43 H                     0.121547
+     44 C                    -0.046178
+     45 C                    -0.102916
+     46 H                     0.123556
+     47 C                    -0.121475
+     48 H                     0.122381
+     49 C                    -0.114757
+     50 H                     0.123586
+     51 C                    -0.121547
+     52 H                     0.122512
+     53 C                    -0.103500
+     54 H                     0.124139
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.1596      Y      -0.1797      Z       0.0092
+       Tot       0.2405
+    Quadrupole Moments (Debye-Ang)
+        XX    -137.9337     XY      -5.7513     YY    -158.6416
+        XZ      -2.0419     YZ     -10.6835     ZZ    -142.6258
+    Octopole Moments (Debye-Ang^2)
+       XXX    -924.4290    XXY    -257.8675    XYY    -367.9002
+       YYY    -808.5927    XXZ     -49.1239    XYZ     -13.8749
+       YYZ     -84.7979    XZZ    -296.8634    YZZ    -256.9521
+       ZZZ    -166.4115
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX  -13636.8672   XXXY   -1593.7334   XXYY   -3458.4997
+      XYYY   -1495.0682   YYYY   -5622.1032   XXXZ   -1024.4844
+      XXYZ    -222.1958   XYYZ    -301.0519   YYYZ    -335.9608
+      XXZZ   -2595.5233   XYZZ    -456.9413   YYZZ   -1138.0876
+      XZZZ    -999.0497   YZZZ    -250.9089   ZZZZ   -1563.1798
+ -----------------------------------------------------------------
+ Total job time:  723.20s(wall), 14060.02s(cpu) 
+ Thu Nov 24 19:39:05 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
+
+Running Job 2 of 2 e_5.87_1.0_-1.inp
+qchem e_5.87_1.0_-1.inp_9490.1 /tmp/SLURM_12485930/qchem9490/ 0
+/spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/exe/qcprog.exe_s e_5.87_1.0_-1.inp_9490.1 /tmp/SLURM_12485930/qchem9490/
+                  Welcome to Q-Chem
+     A Quantum Leap Into The Future Of Chemistry
+
+
+ Q-Chem 5.4, Q-Chem, Inc., Pleasanton, CA (2021)
+
+ License issued to: University of Southern California
+
+ E. Epifanovsky,  A. T. B. Gilbert,  Xintian Feng,  Joonho Lee,  Yuezhi Mao,  
+ N. Mardirossian,  P. Pokhilko,  A. White,  M. Wormit,  M. P. Coons,  
+ A. L. Dempwolff,  Zhengting Gan,  D. Hait,  P. R. Horn,  L. D. Jacobson,  
+ I. Kaliman,  J. Kussmann,  A. W. Lange,  Ka Un Lao,  D. S. Levine,  Jie Liu,  
+ S. C. McKenzie,  A. F. Morrison,  K. Nanda,  F. Plasser,  D. R. Rehn,  
+ M. L. Vidal,  Zhi-Qiang You,  Ying Zhu,  B. Alam,  B. Albrecht,  
+ A. Aldossary,  E. Alguire,  J. H. Andersen,  D. Barton,  K. Begam,  A. Behn,  
+ Y. A. Bernard,  E. J. Berquist,  H. Burton,  A. Carreras,  K. Carter-Fenk,  
+ Romit Chakraborty,  A. D. Chien,  K. D. Closser,  V. Cofer-Shabica,  
+ S. Dasgupta,  Jia Deng,  M. de Wergifosse,  M. Diedenhofen,  Hainam Do,  
+ S. Ehlert,  Po-Tung Fang,  S. Fatehi,  Qingguo Feng,  T. Friedhoff,  
+ J. Gayvert,  Qinghui Ge,  G. Gidofalvi,  M. Goldey,  J. Gomes,  
+ C. Gonzalez-Espinoza,  S. Gulania,  A. Gunina,  M. W. D. Hanson-Heine,  
+ P. H. P. Harbach,  A. W. Hauser,  M. F. Herbst,  M. Hernandez Vera,  
+ M. Hodecker,  Z. C. Holden,  S. Houck,  Xunkun Huang,  Kerwin Hui,  
+ B. C. Huynh,  M. Ivanov,  Hyunjun Ji,  Hanjie Jiang,  B. Kaduk,  S. Kaehler,  
+ K. Khistyaev,  Jaehoon Kim,  P. Klunzinger,  Z. Koczor-Benda,  
+ Joong Hoon Koh,  D. Kosenkov,  L. Koulias,  T. Kowalczyk,  C. M. Krauter,  
+ K. Kue,  A. Kunitsa,  T. Kus,  A. Landau,  K. V. Lawler,  D. Lefrancois,  
+ S. Lehtola,  Rain Li,  Yi-Pei Li,  Jiashu Liang,  M. Liebenthal,  
+ Hung-Hsuan Lin,  You-Sheng Lin,  Fenglai Liu,  Kuan-Yu Liu,  
+ M. Loipersberger,  A. Luenser,  A. Manjanath,  P. Manohar,  E. Mansoor,  
+ S. F. Manzer,  Shan-Ping Mao,  A. V. Marenich,  T. Markovich,  S. Mason,  
+ S. A. Maurer,  P. F. McLaughlin,  M. F. S. J. Menger,  J.-M. Mewes,  
+ S. A. Mewes,  P. Morgante,  J. W. Mullinax,  K. J. Oosterbaan,  G. Paran,  
+ Alexander C. Paul,  Suranjan K. Paul,  F. Pavosevic,  Zheng Pei,  S. Prager,  
+ E. I. Proynov,  E. Ramos,  B. Rana,  A. E. Rask,  A. Rettig,  R. M. Richard,  
+ F. Rob,  E. Rossomme,  T. Scheele,  M. Scheurer,  M. Schneider,  
+ N. Sergueev,  S. M. Sharada,  W. Skomorowski,  D. W. Small,  C. J. Stein,  
+ Yu-Chuan Su,  E. J. Sundstrom,  Zhen Tao,  J. Thirman,  T. Tsuchimochi,  
+ N. M. Tubman,  S. P. Veccham,  O. Vydrov,  J. Wenzel,  J. Witte,  A. Yamada,  
+ Kun Yao,  S. Yeganeh,  S. R. Yost,  A. Zech,  Igor Ying Zhang,  Xing Zhang,  
+ Yu Zhang,  D. Zuev,  A. Aspuru-Guzik,  A. T. Bell,  N. A. Besley,  
+ K. B. Bravaya,  B. R. Brooks,  D. Casanova,  Jeng-Da Chai,  S. Coriani,  
+ C. J. Cramer,  A. E. DePrince, III,  R. A. DiStasio Jr.,  A. Dreuw,  
+ B. D. Dunietz,  T. R. Furlani,  W. A. Goddard III,  S. Grimme,  
+ S. Hammes-Schiffer,  T. Head-Gordon,  W. J. Hehre,  Chao-Ping Hsu,  
+ T.-C. Jagau,  Yousung Jung,  A. Klamt,  Jing Kong,  D. S. Lambrecht,  
+ WanZhen Liang,  N. J. Mayhall,  C. W. McCurdy,  J. B. Neaton,  T. Neudecker,  
+ C. Ochsenfeld,  J. A. Parkhill,  R. Peverati,  V. A. Rassolov,  Yihan Shao,  
+ L. V. Slipchenko,  R. P. Steele,  J. E. Subotnik,  A. J. W. Thom,  
+ A. Tkatchenko,  D. G. Truhlar,  T. Van Voorhis,  T. A. Wesolowski,  
+ K. B. Whaley,  H. L. Woodcock III,  P. M. Zimmerman,  S. Faraji,  
+ P. M. W. Gill,  M. Head-Gordon,  J. M. Herbert,  A. I. Krylov
+
+ Additional authors since Version 5.4.0: 
+ Chandrima Chakravarty,  L. Cunha,  R. Kang,  Yongbin Kim,  S. Kotaru,  
+ Shaozhi Li,  Xiangyuan Li,  F. Matz,  A. Molle,  V. Parravicini,  
+ Haisheng Ren,  Hengyuan Shen,  Yingli Su,  Hung-Yi Tsai,  C. Utku,  
+ Fang Wang,  Jeff Yang,  F. Zeller
+
+ Contributors to earlier versions of Q-Chem not listed above: 
+ R. D. Adamson,  B. Austin,  R. Baer,  J. Baker,  G. J. O. Beran,  
+ K. Brandhorst,  S. T. Brown,  E. F. C. Byrd,  Arup K. Chakraborty,  
+ G. K. L. Chan,  Chun-Min Chang,  Yunqing Chen,  C.-L. Cheng,  
+ Siu Hung Chien,  D. M. Chipman,  D. L. Crittenden,  H. Dachsel,  
+ R. J. Doerksen,  A. D. Dutoi,  R. G. Edgar,  J. Fosso-Tande,  
+ L. Fusti-Molnar,  D. Ghosh,  A. Ghysels,  A. Golubeva-Zadorozhnaya,  
+ J. Gonthier,  M. S. Gordon,  S. R. Gwaltney,  G. Hawkins,  J. E. Herr,  
+ A. Heyden,  S. Hirata,  E. G. Hohenstein,  G. Kedziora,  F. J. Keil,  
+ C. Kelley,  Jihan Kim,  R. A. King,  R. Z. Khaliullin,  P. P. Korambath,  
+ W. Kurlancheek,  A. Laurent,  A. M. Lee,  M. S. Lee,  S. V. Levchenko,  
+ Ching Yeh Lin,  D. Liotard,  E. Livshits,  R. C. Lochan,  I. Lotan,  
+ L. A. Martinez-Martinez,  P. E. Maslen,  N. Nair,  D. P. O'Neill,  
+ D. Neuhauser,  E. Neuscamman,  C. M. Oana,  R. Olivares-Amaya,  R. Olson,  
+ T. M. Perrine,  B. Peters,  P. A. Pieniazek,  A. Prociuk,  Y. M. Rhee,  
+ J. Ritchie,  M. A. Rohrdanz,  E. Rosta,  N. J. Russ,  H. F. Schaefer III,  
+ M. W. Schmidt,  N. E. Schultz,  S. Sharma,  N. Shenvi,  C. D. Sherrill,  
+ A. C. Simmonett,  A. Sodt,  T. Stein,  D. Stuck,  K. S. Thanthiriwatte,  
+ V. Vanovschi,  L. Vogt,  Tao Wang,  A. Warshel,  M. A. Watson,  
+ C. F. Williams,  Q. Wu,  X. Xu,  Jun Yang,  W. Zhang,  Yan Zhao
+
+   Please cite Q-Chem as follows:
+  "Software for the frontiers of quantum chemistry:
+   An overview of developments in the Q-Chem 5 package"
+   J. Chem. Phys. 155, 084801 (2021)
+   https://doi.org/10.1063/5.0055522 (open access)
+
+ Q-Chem 5.4.2 for Intel X86 EM64T Linux
+
+ Parts of Q-Chem use Armadillo 9.900.5 (Nocturnal Misbehaviour).
+ http://arma.sourceforge.net/
+
+ Q-Chem begins on Thu Nov 24 19:39:05 2022  
+
+ Host: 
+0
+
+     Scratch files written to /tmp/SLURM_12485930/qchem9490//
+ Dec1321 |scratch|qcdevops|jenkins|workspace|build_RNUM 6013   
+ Processing $rem in /spack/apps/linux-centos7-x86_64/gcc-8.3.0/qchem-5.4.2/openmp/config/preferences:
+ Processing $rem in /home1/patraa/.qchemrc:
+The previous job contains 0 fragments, simply inherited here
+ Symmetry turned off for PCM/SM12/SMD calculation
+
+ Checking the input file for inconsistencies... 	...done.
+
+--------------------------------------------------------------
+User input:
+--------------------------------------------------------------
+
+$molecule
+READ
+$end
+
+$rem
+BASIS  =  6-311G**
+METHOD = wb97xd
+SCF_GUESS = READ
+SCF_CONVERGENCE = 8
+SOLVENT_METHOD  =  PCM
+SYMMETRY  =  FALSE
+SYMMETRY_IGNORE  =  1
+SOLVENT_METHOD =  PCM
+PCM_PRINT =  1
+$end
+
+$pcm
+StateSpecific      Marcus
+$end
+
+$solvent
+DIELECTRIC  2.03
+OPTICALDIELECTRIC  2.01
+$end
+--------------------------------------------------------------
+ ----------------------------------------------------------------
+             Standard Nuclear Orientation (Angstroms)
+    I     Atom           X                Y                Z
+ ----------------------------------------------------------------
+    1      C       2.6302422690     4.5765983056     1.0360202725
+    2      C       3.1071480250     3.1430577752     0.7673265751
+    3      N       4.5334035432     2.9890617388     0.8622862533
+    4      H       2.9892113727     4.9409467179     2.0008032062
+    5      H       2.9537872810     5.2645393087     0.2538926867
+    6      H       2.6317974116     2.4553749962     1.4591842251
+    7      H       1.5403493137     4.5648944767     1.0505166773
+    8      C       5.2024568383     2.5139461408     2.0495656330
+    9      H       5.9559415752     3.2618408306     2.3176602297
+   10      H       5.7699332778     1.6195021251     1.7424613648
+   11      H       2.8117806646     2.8382123665    -0.2394602148
+   12      C       4.3140132009     2.2004401360     3.2356136063
+   13      H       3.6270033264     1.3831386944     3.0161055749
+   14      H       4.9541899818     1.8820196823     4.0595389144
+   15      H       3.7454689823     3.0734971016     3.5645536214
+   16      C       5.3780750485     3.5485901120    -0.1828762817
+   17      H       6.1946384201     2.8444806550    -0.3396512830
+   18      H       4.7853605209     3.5842421439    -1.0958940581
+   19      C       5.9378655668     4.9325889923     0.1572387181
+   20      H       6.5264956013     5.2796105516    -0.6928263085
+   21      H       5.1470152688     5.6583038434     0.3458344090
+   22      H       6.5946675674     4.8983471774     1.0278931962
+   23      C       3.7554601108    -0.0640961787     0.2327306623
+   24      C       4.7465138465     0.3097951638    -0.7400803491
+   25      H       4.4378777251     0.7572281445    -1.6772901296
+   26      C       6.0950747576     0.1288932857    -0.5115775444
+   27      H       6.8049182994     0.4347275260    -1.2752815690
+   28      C       6.5665241779    -0.4245017893     0.6853467350
+   29      H       7.6260152386    -0.5747059256     0.8540031922
+   30      C       5.6109672677    -0.8890618448     1.6173911206
+   31      H       5.9466869661    -1.3917553687     2.5195352877
+   32      C       4.2655963308    -0.7208654212     1.4044958372
+   33      H       3.5737852142    -1.1178254042     2.1382212210
+   34      C       2.3716345813     0.2363947452     0.0620982677
+   35      C       1.8415616448     0.7548619152    -1.1638243261
+   36      H       2.4493149872     0.7468143044    -2.0611856804
+   37      C       0.5532214146     1.2313896170    -1.2596539304
+   38      H       0.2057647987     1.5896849016    -2.2241293555
+   39      C      -0.3349722567     1.2280006827    -0.1664675698
+   40      C       0.1499220726     0.6455221714     1.0257755442
+   41      H      -0.4927584665     0.6076631432     1.9000884446
+   42      C       1.4316045237     0.1620744934     1.1391261081
+   43      H       1.7424332300    -0.2392197523     2.0968717538
+   44      C      -1.6893490338     1.7893253875    -0.2669867802
+   45      C      -2.7487499627     1.3077685764     0.5206571177
+   46      H      -2.5764839422     0.4787272700     1.1979814690
+   47      C      -4.0226689509     1.8498788211     0.4287460108
+   48      H      -4.8185438745     1.4500349884     1.0482111883
+   49      C      -4.2888007710     2.8864604469    -0.4607092354
+   50      H      -5.2850833021     3.3073930200    -0.5344232119
+   51      C      -3.2549931828     3.3749305308    -1.2530048250
+   52      H      -3.4421966267     4.1863919163    -1.9485077327
+   53      C      -1.9779952056     2.8409291645    -1.1535780011
+   54      H      -1.1826246694     3.2609085964    -1.7594627376
+ ----------------------------------------------------------------
+ Nuclear Repulsion Energy =        2142.17005053 hartrees
+ There are       90 alpha and       90 beta electrons
+ Requested basis set is 6-311G(d,p)
+ There are 241 shells and 624 basis functions
+
+ Total QAlloc Memory Limit   8000 MB
+ Mega-Array Size       188 MB
+ MEM_STATIC part       192 MB
+ Discretize the solute cavity surface with Lebedev spheres
+	Using 110 Lebedev grid points for each H atom
+	Using 194 Lebedev grid points for other atoms
+	Atomic van der Waals radii will be scaled by 1.20
+ Remove points where switching function is < 1.0e-08
+ Keep 3154 surface tesserae and discard 4886 interior tesserae
+ Molecular Surface Area = 398.715 Angst**2
+ A cutoff of  1.0D-11 yielded  16963 shell pairs
+ There are    114049 function pairs (    122938 Cartesian)
+ Smallest overlap matrix eigenvalue = 1.28E-04
+
+ Scale SEOQF with 1.000000e-02/1.000000e-02/1.000000e-01
+
+ Standard Electronic Orientation quadrupole field applied
+ Nucleus-field energy     =    -0.0000000134 hartrees
+ Guess MOs from SCF MO coefficient file
+
+ -----------------------------------------------------------------------
+  General SCF calculation program by
+  Eric Jon Sundstrom, Paul Horn, Yuezhi Mao, Dmitri Zuev, Alec White,
+  David Stuck, Shaama M.S., Shane Yost, Joonho Lee, David Small,
+  Daniel Levine, Susi Lehtola, Hugh Burton, Evgeny Epifanovsky,
+  Bang C. Huynh
+ -----------------------------------------------------------------------
+ Exchange:     0.2220 Hartree-Fock + 1.0000 wB97X-D + LR-HF
+ Correlation:  1.0000 wB97X-D
+ Using SG-2 standard quadrature grid
+ Dispersion:   Grimme D
+ using 32 threads for integral computing
+ -------------------------------------------------------
+ OpenMP Integral computing Module                
+ Release: version 1.0, May 2013, Q-Chem Inc. Pittsburgh 
+ -------------------------------------------------------
+ A restricted SCF calculation will be
+ performed using Roothaan-Hall, DIIS
+ SCF converges when DIIS error is below 1.0e-08
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+ BuildS Time: 0.38 s (CPU) 0.01 s (wall)
+ Time req'd to invert C: 19.20 s (CPU) 0.60 s (wall)
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025777e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.885295e-02
+ Electronic Surface Charge Gauss Law Error =   -1.855315e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.885295e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.76568054 a.u. = 1150077.82266538 kcal/mol
+  qe-ESPN =    1832.76462041 a.u. = 1150077.15742404 kcal/mol
+  qe-ESPe =   -1832.89870014 a.u. = -1150161.29371882 kcal/mol
+  -------
+  q-ESPN  =       0.12193396 a.u. =      76.51471677 kcal/mol
+  q-ESPe  =      -0.13301959 a.u. =     -83.47105344 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00010605 a.u. =       0.06654607 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00232653 a.u. =      -1.45991791 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    1    -986.6506714676      6.72e-05  Roothaan Step
+ ---------------------------------------
+  Cycle       Energy         DIIS error
+ ---------------------------------------
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025803e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.859648e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852751e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.859648e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.83215515 a.u. = 1150119.53610762 kcal/mol
+  qe-ESPN =    1832.83109502 a.u. = 1150118.87086627 kcal/mol
+  qe-ESPe =   -1833.03379080 a.u. = -1150246.06438794 kcal/mol
+  -------
+  q-ESPN  =       0.18840857 a.u. =     118.22815901 kcal/mol
+  q-ESPe  =      -0.20163565 a.u. =    -126.52828032 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011942 a.u. =       0.07493839 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00235314 a.u. =      -1.47662027 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    1    -986.6565712396      8.71e-05  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025799e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.863858e-02
+ Electronic Surface Charge Gauss Law Error =   -1.853172e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.863858e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81024470 a.u. = 1150105.78709354 kcal/mol
+  qe-ESPN =    1832.80918457 a.u. = 1150105.12185219 kcal/mol
+  qe-ESPe =   -1832.98949325 a.u. = -1150218.26725820 kcal/mol
+  -------
+  q-ESPN  =       0.16649812 a.u. =     104.47914493 kcal/mol
+  q-ESPe  =      -0.17924855 a.u. =    -112.48016466 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011639 a.u. =       0.07303309 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234710 a.u. =      -1.47282835 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    2    -986.6569634932      5.90e-05  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025801e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.861980e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852984e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.861980e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81647969 a.u. = 1150109.69961258 kcal/mol
+  qe-ESPN =    1832.81541956 a.u. = 1150109.03437124 kcal/mol
+  qe-ESPe =   -1833.00203899 a.u. = -1150226.13982844 kcal/mol
+  -------
+  q-ESPN  =       0.17273311 a.u. =     108.39166397 kcal/mol
+  q-ESPe  =      -0.18555930 a.u. =    -116.44021585 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011676 a.u. =       0.07326713 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234784 a.u. =      -1.47329414 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    3    -986.6571313496      1.15e-05  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860974e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852883e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860974e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81582855 a.u. = 1150109.29101591 kcal/mol
+  qe-ESPN =    1832.81476842 a.u. = 1150108.62577456 kcal/mol
+  qe-ESPe =   -1833.00076313 a.u. = -1150225.33921469 kcal/mol
+  -------
+  q-ESPN  =       0.17208197 a.u. =     107.98306729 kcal/mol
+  q-ESPe  =      -0.18493458 a.u. =    -116.04819878 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011687 a.u. =       0.07333720 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234807 a.u. =      -1.47343359 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    4    -986.6571365993      7.11e-06  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860749e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852861e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860749e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81577185 a.u. = 1150109.25543521 kcal/mol
+  qe-ESPN =    1832.81471172 a.u. = 1150108.59019386 kcal/mol
+  qe-ESPe =   -1833.00065814 a.u. = -1150225.27333272 kcal/mol
+  -------
+  q-ESPN  =       0.17202527 a.u. =     107.94748659 kcal/mol
+  q-ESPe  =      -0.18488629 a.u. =    -116.01789751 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011693 a.u. =       0.07337466 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234818 a.u. =      -1.47350813 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    5    -986.6571392280      1.26e-06  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860635e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852849e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860635e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81602395 a.u. = 1150109.41362776 kcal/mol
+  qe-ESPN =    1832.81496382 a.u. = 1150108.74838642 kcal/mol
+  qe-ESPe =   -1833.00116457 a.u. = -1150225.59111986 kcal/mol
+  -------
+  q-ESPN  =       0.17227737 a.u. =     108.10567915 kcal/mol
+  q-ESPe  =      -0.18514062 a.u. =    -116.17749209 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011694 a.u. =       0.07337991 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234820 a.u. =      -1.47351858 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    6    -986.6571393156      6.69e-07  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860600e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852846e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860600e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81599482 a.u. = 1150109.39534980 kcal/mol
+  qe-ESPN =    1832.81493469 a.u. = 1150108.73010845 kcal/mol
+  qe-ESPe =   -1833.00110685 a.u. = -1150225.55489958 kcal/mol
+  -------
+  q-ESPN  =       0.17224824 a.u. =     108.08740118 kcal/mol
+  q-ESPe  =      -0.18511203 a.u. =    -116.15954979 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011694 a.u. =       0.07337955 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234820 a.u. =      -1.47351786 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    7    -986.6571393384      1.90e-07  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860596e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852845e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860596e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81600992 a.u. = 1150109.40482376 kcal/mol
+  qe-ESPN =    1832.81494979 a.u. = 1150108.73958241 kcal/mol
+  qe-ESPe =   -1833.00113716 a.u. = -1150225.57392019 kcal/mol
+  -------
+  q-ESPN  =       0.17226334 a.u. =     108.09687515 kcal/mol
+  q-ESPe  =      -0.18512724 a.u. =    -116.16909643 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011694 a.u. =       0.07338028 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234820 a.u. =      -1.47351933 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    8    -986.6571393402      5.04e-08  
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860595e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852845e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860595e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81600000 a.u. = 1150109.39860269 kcal/mol
+  qe-ESPN =    1832.81493987 a.u. = 1150108.73336134 kcal/mol
+  qe-ESPe =   -1833.00111734 a.u. = -1150225.56148655 kcal/mol
+  -------
+  q-ESPN  =       0.17225342 a.u. =     108.09065407 kcal/mol
+  q-ESPe  =      -0.18511734 a.u. =    -116.16288386 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011694 a.u. =       0.07338039 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234820 a.u. =      -1.47351954 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+    9    -986.6571393402      1.76e-08  
+   10    -986.6571393406      6.35e-09  Convergence criterion met
+
+ ----------------Surface Charge Diagnostics-----------------
+ Total Electronic Charge                   =            -180
+ Total Nuclear Charge                      =             180
+ Theoretical Electronic Surface Charge     =    9.044331e+01
+ Theoretical Nuclear Surface Charge        =   -9.044331e+01
+ Theoretical Total Surface Charge          =    0.000000e+00
+ Total Electronic Surface Charge           =    9.025802e+01
+ Total Nuclear Surface Charge              =   -9.027663e+01
+ Total Surface Charge                      =   -1.860595e-02
+ Electronic Surface Charge Gauss Law Error =   -1.852845e-01
+ Nuclear Surface Charge Gauss Law Error    =    1.666786e-01
+ Total Surface Charge Gauss Law Error      =   -1.860595e-02
+ -----------------------------------------------------------
+----------------------Components of G_es----------------------
+  qN-ESPN =   -1832.64268645 a.u. = -1150000.64270727 kcal/mol
+  qN-ESPe =    1832.81600173 a.u. = 1150109.39968420 kcal/mol
+  qe-ESPN =    1832.81494160 a.u. = 1150108.73444286 kcal/mol
+  qe-ESPe =   -1833.00112080 a.u. = -1150225.56365352 kcal/mol
+  -------
+  q-ESPN  =       0.17225515 a.u. =     108.09173559 kcal/mol
+  q-ESPe  =      -0.18511907 a.u. =    -116.16396932 kcal/mol
+------------------Components of G_es (Ref.)-------------------
+  q-ESPS'   =       0.00011694 a.u. =       0.07338042 kcal/mol
+  qS'-ESPN  =       0.00210987 a.u. =       1.32396137 kcal/mol
+  qS'-ESPe  =      -0.00234820 a.u. =      -1.47351960 kcal/mol
+  qF'-ESP   =       0.00000000 a.u. =       0.00000000 kcal/mol
+  qS'-ESP'  =      -0.00056881 a.u. =      -0.35693142 kcal/mol
+  qS'-qF'   =       0.00028299 a.u. =       0.17757774 kcal/mol
+  qF'-ESP'  =      -0.02872188 a.u. =     -18.02325228 kcal/mol
+---------------------------------------------------------------
+ ---------------------------------------
+ SCF time:   CPU 1533.57s  wall 104.00s 
+
+************** Final PCM Free Energy Summary **************
+ G_electrostatic  =      -0.00646892 hartree =      -4.05930804 kcal/mol
+ G_cavitation     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_dispersion     =       0.00000000 hartree =       0.00000000 kcal/mol
+ G_repulsion      =       0.00000000 hartree =       0.00000000 kcal/mol
+ --------------------------------------------------
+ Non-electrostatic Free Energy =       0.00000000 hartree =       0.00000000 kcal/mol
+ Total                         =      -0.00646892 hartree =      -4.05930804 kcal/mol
+ --------------------------------------------------
+ SCF Energy (H0 + V/2)                       =    -986.65713934 
+ Solute Internal Energy (H0)                 =    -986.65067042 
+ Total Free Energy (H0 + V/2 + non-elec)     =    -986.65713934 hartree
+                                             = -619136.69956597 kcal/mol
+***********************************************************
+
+ SCF   energy in the final basis set =     -986.6571393406
+ Total energy in the final basis set =     -986.6571393406
+ 
+ --------------------------------------------------------------
+ 
+                    Orbital Energies (a.u.)
+ --------------------------------------------------------------
+ 
+ Alpha MOs
+ -- Occupied --
+-14.3812 -10.3070 -10.3061 -10.3055 -10.3042 -10.2930 -10.2926 -10.2918
+-10.2910 -10.2909 -10.2904 -10.2904 -10.2903 -10.2901 -10.2898 -10.2897
+-10.2895 -10.2889 -10.2878 -10.2877 -10.2836 -10.2815 -10.2619 -10.2551
+-10.2499  -1.0017  -0.9807  -0.9660  -0.9485  -0.8962  -0.8596  -0.8556
+ -0.8528  -0.8495  -0.8456  -0.8444  -0.8085  -0.7945  -0.7413  -0.7241
+ -0.7196  -0.7062  -0.7005  -0.6961  -0.6738  -0.6700  -0.6328  -0.6322
+ -0.6131  -0.5771  -0.5731  -0.5685  -0.5663  -0.5458  -0.5427  -0.5375
+ -0.5367  -0.5227  -0.5185  -0.5123  -0.5106  -0.5087  -0.5011  -0.4984
+ -0.4954  -0.4821  -0.4778  -0.4705  -0.4657  -0.4597  -0.4583  -0.4484
+ -0.4428  -0.4412  -0.4378  -0.4324  -0.4286  -0.4230  -0.4221  -0.4132
+ -0.4071  -0.4013  -0.3959  -0.3747  -0.3382  -0.3356  -0.3335  -0.3330
+ -0.2799  -0.2374
+ -- Virtual --
+ -0.0052   0.0453   0.0561   0.0578   0.0720   0.1090   0.1148   0.1259
+  0.1309   0.1322   0.1386   0.1501   0.1607   0.1626   0.1640   0.1685
+  0.1755   0.1858   0.1868   0.1888   0.1959   0.1990   0.2020   0.2049
+  0.2161   0.2211   0.2255   0.2345   0.2388   0.2431   0.2451   0.2511
+  0.2593   0.2620   0.2637   0.2690   0.2705   0.2762   0.2868   0.2929
+  0.3020   0.3128   0.3155   0.3166   0.3220   0.3254   0.3339   0.3461
+  0.3518   0.3553   0.3593   0.3631   0.3686   0.3711   0.3835   0.3903
+  0.3922   0.3967   0.4007   0.4055   0.4097   0.4158   0.4224   0.4261
+  0.4306   0.4339   0.4440   0.4618   0.4621   0.4669   0.4690   0.4732
+  0.4747   0.4823   0.4911   0.4943   0.4970   0.5006   0.5085   0.5103
+  0.5167   0.5207   0.5231   0.5260   0.5296   0.5313   0.5320   0.5394
+  0.5475   0.5482   0.5538   0.5610   0.5693   0.5817   0.5875   0.5967
+  0.5991   0.6061   0.6131   0.6217   0.6237   0.6285   0.6349   0.6413
+  0.6419   0.6505   0.6510   0.6629   0.6639   0.6673   0.6720   0.6774
+  0.6810   0.6828   0.6858   0.6864   0.6898   0.6916   0.6947   0.7011
+  0.7058   0.7066   0.7103   0.7119   0.7144   0.7162   0.7212   0.7237
+  0.7285   0.7324   0.7372   0.7400   0.7415   0.7435   0.7487   0.7613
+  0.7682   0.7730   0.7776   0.7864   0.7895   0.8006   0.8105   0.8167
+  0.8212   0.8252   0.8325   0.8373   0.8405   0.8481   0.8547   0.8564
+  0.8658   0.8789   0.8825   0.8877   0.8981   0.9039   0.9157   0.9172
+  0.9194   0.9280   0.9333   0.9371   0.9450   0.9456   0.9617   0.9703
+  0.9781   0.9814   0.9939   1.0092   1.0116   1.0282   1.0351   1.0405
+  1.0477   1.0540   1.0667   1.0731   1.0851   1.0907   1.0954   1.0979
+  1.1124   1.1221   1.1308   1.1402   1.1485   1.1529   1.1607   1.1657
+  1.1755   1.1821   1.1873   1.1903   1.2067   1.2133   1.2250   1.2306
+  1.2364   1.2406   1.2430   1.2530   1.2627   1.2843   1.2958   1.3218
+  1.3315   1.3370   1.3507   1.3568   1.3642   1.3745   1.3917   1.3981
+  1.4204   1.4411   1.4661   1.4821   1.4969   1.5025   1.5107   1.5179
+  1.5273   1.5363   1.5388   1.5395   1.5422   1.5478   1.5506   1.5518
+  1.5625   1.5692   1.5747   1.5795   1.5842   1.5910   1.6007   1.6100
+  1.6153   1.6205   1.6242   1.6331   1.6397   1.6434   1.6465   1.6541
+  1.6581   1.6634   1.6675   1.6725   1.6779   1.6824   1.6854   1.6915
+  1.7013   1.7055   1.7112   1.7162   1.7202   1.7273   1.7346   1.7413
+  1.7462   1.7542   1.7592   1.7664   1.7712   1.7724   1.7817   1.7927
+  1.8004   1.8132   1.8204   1.8249   1.8357   1.8391   1.8432   1.8463
+  1.8522   1.8545   1.8610   1.8621   1.8706   1.8738   1.8768   1.8875
+  1.8915   1.8966   1.9060   1.9146   1.9261   1.9357   1.9454   1.9507
+  1.9603   1.9667   1.9738   1.9807   1.9832   1.9872   1.9950   2.0052
+  2.0079   2.0142   2.0179   2.0246   2.0323   2.0352   2.0445   2.0457
+  2.0584   2.0601   2.0641   2.0753   2.0796   2.0882   2.0951   2.0984
+  2.1072   2.1194   2.1240   2.1288   2.1340   2.1530   2.1582   2.1697
+  2.1725   2.1763   2.1785   2.1946   2.2065   2.2131   2.2237   2.2395
+  2.2702   2.2715   2.2814   2.2886   2.3023   2.3170   2.3447   2.3631
+  2.3698   2.3768   2.3813   2.3877   2.3991   2.4039   2.4150   2.4183
+  2.4288   2.4330   2.4400   2.4418   2.4593   2.4677   2.4713   2.4780
+  2.4844   2.4957   2.5034   2.5098   2.5104   2.5171   2.5198   2.5320
+  2.5386   2.5521   2.5621   2.5762   2.5860   2.5957   2.6177   2.6319
+  2.6394   2.6531   2.6584   2.6625   2.6637   2.6746   2.6756   2.6778
+  2.6910   2.6936   2.7011   2.7062   2.7084   2.7162   2.7220   2.7263
+  2.7314   2.7359   2.7464   2.7530   2.7558   2.7640   2.7687   2.7739
+  2.7745   2.7819   2.7867   2.7877   2.7903   2.8009   2.8032   2.8158
+  2.8209   2.8244   2.8293   2.8375   2.8379   2.8470   2.8602   2.8730
+  2.8743   2.8828   2.8905   2.8986   2.9140   2.9178   2.9261   2.9355
+  2.9423   2.9461   2.9557   2.9591   2.9847   2.9854   2.9921   3.0054
+  3.0118   3.0126   3.0212   3.0267   3.0412   3.0434   3.0578   3.0598
+  3.0940   3.0997   3.1096   3.1277   3.1428   3.1661   3.1945   3.2077
+  3.2251   3.2459   3.2796   3.3144   3.3311   3.3369   3.3541   3.3564
+  3.4082   3.4391   3.4432   3.4599   3.5066   3.5142   3.5424   3.5747
+  3.5852   3.5983   3.6176   3.6397   3.6582   3.6767   3.6920   3.7009
+  3.7124   3.7440   3.7635   3.8096   3.8883   3.8993   3.9126   3.9165
+  3.9278   3.9322   3.9452   3.9581   3.9760   3.9893   4.0196   4.0623
+  4.0735   4.1084   4.1291   4.1482   4.1855   4.2265   4.2296   4.2340
+  4.2662   4.2818   4.3085   4.3193   4.3404   4.4315   4.5450   4.7482
+  4.8789   4.9212   4.9540   5.0617   5.1352  23.6031  23.7442  23.8628
+ 23.9860  24.0111  24.0212  24.0327  24.0483  24.0521  24.0611  24.0659
+ 24.0835  24.1050  24.1081  24.1212  24.1373  24.1564  24.1963  24.2423
+ 24.2603  24.2702  24.3151  24.3209  24.3313  35.7317
+ --------------------------------------------------------------
+ 
+          Ground-State Mulliken Net Atomic Charges
+
+     Atom                 Charge (a.u.)
+  ----------------------------------------
+      1 C                    -0.309576
+      2 C                    -0.117542
+      3 N                    -0.410445
+      4 H                     0.107522
+      5 H                     0.110467
+      6 H                     0.134162
+      7 H                     0.103725
+      8 C                    -0.052352
+      9 H                     0.091299
+     10 H                     0.126372
+     11 H                     0.118291
+     12 C                    -0.373717
+     13 H                     0.112684
+     14 H                     0.122104
+     15 H                     0.123306
+     16 C                    -0.145691
+     17 H                     0.112618
+     18 H                     0.114942
+     19 C                    -0.298542
+     20 H                     0.105012
+     21 H                     0.112737
+     22 H                     0.112587
+     23 C                    -0.019124
+     24 C                    -0.077372
+     25 H                     0.116210
+     26 C                    -0.112651
+     27 H                     0.124170
+     28 C                    -0.146956
+     29 H                     0.122202
+     30 C                    -0.109076
+     31 H                     0.119417
+     32 C                    -0.120297
+     33 H                     0.125702
+     34 C                    -0.052386
+     35 C                    -0.120172
+     36 H                     0.122337
+     37 C                    -0.102975
+     38 H                     0.122164
+     39 C                    -0.014703
+     40 C                    -0.110751
+     41 H                     0.119883
+     42 C                    -0.112878
+     43 H                     0.121529
+     44 C                    -0.046201
+     45 C                    -0.102957
+     46 H                     0.123538
+     47 C                    -0.121480
+     48 H                     0.122394
+     49 C                    -0.114781
+     50 H                     0.123600
+     51 C                    -0.121552
+     52 H                     0.122537
+     53 C                    -0.103510
+     54 H                     0.124174
+  ----------------------------------------
+  Sum of atomic charges =     0.000000
+
+ -----------------------------------------------------------------
+                    Cartesian Multipole Moments
+ -----------------------------------------------------------------
+    Charge (ESU x 10^10)
+                 0.0000
+    Dipole Moment (Debye)
+         X      -0.1528      Y      -0.1690      Z       0.0114
+       Tot       0.2281
+    Quadrupole Moments (Debye-Ang)
+        XX    -137.8945     XY      -5.7018     YY    -158.6044
+        XZ      -2.0291     YZ     -10.6707     ZZ    -142.6239
+    Octopole Moments (Debye-Ang^2)
+       XXX    -924.1711    XXY    -257.5973    XYY    -367.7362
+       YYY    -808.3934    XXZ     -49.0501    XYZ     -13.8079
+       YYZ     -84.7498    XZZ    -296.8355    YZZ    -256.9135
+       ZZZ    -166.3956
+    Hexadecapole Moments (Debye-Ang^3)
+      XXXX  -13635.2484   XXXY   -1592.2482   XXYY   -3457.5960
+      XYYY   -1494.2141   YYYY   -5621.1382   XXXZ   -1024.0419
+      XXYZ    -221.8505   XYYZ    -300.7902   YYYZ    -335.7262
+      XXZZ   -2595.3427   XYZZ    -456.7597   YYZZ   -1137.9397
+      XZZZ    -998.9596   YZZZ    -250.8099   ZZZZ   -1563.1573
+ -----------------------------------------------------------------
+ Total job time:  104.98s(wall), 1547.97s(cpu) 
+ Thu Nov 24 19:40:50 2022
+
+        *************************************************************
+        *                                                           *
+        *  Thank you very much for using Q-Chem.  Have a nice day.  *
+        *                                                           *
+        *************************************************************
+
+
+remove work dirs /tmp/SLURM_12485930/qchem9490.0 -- /tmp/SLURM_12485930/qchem9490.-1
+rm -rf /tmp/SLURM_12485930/qchem9490
