@@ -44,6 +44,34 @@ Make sure to replace /path-to/my_files with the actual path to your my_files dir
 
 ### Q-Chem Workflow Automation
 
+### Input file creation
+
+1. From .xyz files:
+   - *cd qchem_workflow/qcinput_from_xyz*
+   - *python xyz_to_inp..py*
+
+2. From previous output files:
+   - *qchem_workflow/qcinput_from_qcoutput/*
+   - *transfer_geom.py*
+
+### Output parsing and Analysis
+
+Directory:- qchem_workflow/output_analysis
+
+In each directory inside, I place a ‘geometry’ folder containing one example output file and a Python script named ‘transfer_geom.py’. This script is designed to create the input file.
+
+1. Mulliken population
+   - *output_analysis/charge_out/geometry*
+3. Emission
+   - *output_analysis/emission_output_cyclohexane/geometry*
+5. Excited state EDA
+   - *output_analysis/output_eda/geometry*
+7. Exciton
+   - *output_analysis/exciton_out/geometry*
+9. Convert output to .xyz
+    - *output_analysis/xyz_files/geometry*
+   
+Each directory (output_analysis/*) contains two sample output files. The Python script ‘excited_state_info.py’, located in the parent directory, is designed to extract all necessary information from the output files in each subdirectory and create a consolidated data file. To execute this process correctly, the paths for each directory must be updated in the Python script.
 
 
 
