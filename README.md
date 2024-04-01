@@ -69,7 +69,7 @@ In each directory inside, I place a ‘geometry’ folder containing one example
 7. Exciton
    - *output_analysis/exciton_out/geometry*
 9. Convert output to .xyz
-    - *output_analysis/xyz_files/geometry*
+    - *output_analysis/xyz_files*
    
 Each directory (output_analysis/*) contains two sample output files. The Python script ‘excited_state_info.py’, located in the parent directory, is designed to extract all necessary information from the output files in each subdirectory and create a consolidated data file. To execute this process correctly, the paths for each directory must be updated in the Python script.
 
