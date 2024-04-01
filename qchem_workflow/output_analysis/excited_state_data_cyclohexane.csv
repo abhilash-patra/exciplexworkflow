@@ -1,0 +1,3 @@
+,name,final_energy,excited_state_energy,excitation_energy,excitation_strength_1,excitation_strength_2,dw_frz(eV),dw_pol(eV),dw_ct(eV),Charge_on_OPP3*,Charge_on_TEA,excited_state_energy_emission,emission_energy_eV,emission_wave_length_in_nm,Oscillator_strength,e_h_distance
+1,e_0.87_0.0_0,-986.6574,-986.5516,2.8793,0.109,1.062,0.0402,-0.0183,-1.3306,-0.856,0.856,-986.5515,2.876,431,0.109,2.5709
+0,e_5.87_1.0_-1,-986.6574,-986.5466,3.0144,0.098,1.063,0.0349,-0.0241,-1.2247,-0.83,0.83,-986.5464,3.012,412,0.098,2.7507
