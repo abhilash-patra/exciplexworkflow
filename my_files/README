@@ -1,3 +1,3 @@
-my_files contains various functional parsers for Q-Chem input file creation and output information extraction.
-All the .yaml files present here are the templates for FireWorks jobs.
-qcfw - This directory hosts excited state parsers for Q-Chem.
+1. my_files contains various functional parsers for Q-Chem input file creation and output information extraction.
+2. All the .yaml files present here are the templates for FireWorks jobs.
+3. qcfw - This directory hosts excited state parsers for Q-Chem.
