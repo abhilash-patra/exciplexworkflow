@@ -79,5 +79,7 @@ Each directory (output_analysis/*) contains two sample output files. The Python 
 
 ### Pymatgen Parsers for Q-Chem input file generation and excited state output parsing
 
+It will be updated soon.
+
 *Workflow published: https://doi.org/10.1063/5.0158061*
 *and used https://doi.org/10.1021/acs.jctc.4c00005*
