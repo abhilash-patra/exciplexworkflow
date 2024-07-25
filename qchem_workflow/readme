@@ -1,1 +1,3 @@
-
+output_analysis       - Contains examples for output parsers
+qcinput_from_qcoutput - Contains Q-Chem input file generation codes from previous Q-Chem outputs
+qcinput_from_xyz      - Contains Q-Chem input file generation codes from xyz files
